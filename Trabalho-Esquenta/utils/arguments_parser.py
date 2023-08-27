@@ -11,4 +11,6 @@ def parser_arguments():
     
     parser.add_argument('--loop', type=int, default=100, help='Quantidade de vezes que o algoritmo sera executado, Padrão 100 iterações')
 
+    parser.add_argument('--n_busca', type=int,default=-1, help='Número para busca, Padrão Aleatório')
+
     return parser.parse_args()
