@@ -53,7 +53,16 @@ def main():
     tipo_lista = dicionarios['t'][args.t]
     num_loops = args.loop
 
-    imprimirInfo(nome_algoritmo=nome_algoritmo, nome_instancia=nome_instancia, tipo_lista=tipo_lista, num_loops=num_loops)
+    if args.n_busca < 0:
+        valor_procurado = random.randint(0, 99999)
+    else:
+        valor_procurado = args.n_busca
+
+    if args.loop < 1:
+        num_loops = 100
+    else:
+        num_loops = args.loop
+
     caminho_relativo = contruirCaminhoInstancia(tipo_lista=tipo_lista, nome_instancia=nome_instancia)
 
 
