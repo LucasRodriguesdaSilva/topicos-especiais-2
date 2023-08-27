@@ -101,7 +101,7 @@ def main():
             'resultado_encontrado': resultado
         }
 
-        time.sleep(0.5)  # Atraso de meio segundo
+        time.sleep(0.1)  # Atraso 
         print(" " * len(f"Iteração {i + 1} de {num_loops}"), end="\r")  # Limpar a linha
 
 
