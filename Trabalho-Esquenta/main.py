@@ -63,6 +63,7 @@ def main():
     else:
         num_loops = args.loop
 
+    imprimirInfo(nome_algoritmo=nome_algoritmo, nome_instancia=nome_instancia, tipo_lista=tipo_lista, num_loops=num_loops, valor_procurado=valor_procurado)
     caminho_relativo = contruirCaminhoInstancia(tipo_lista=tipo_lista, nome_instancia=nome_instancia)
 
 
@@ -83,7 +84,6 @@ def main():
 
     conteudo = ler_arquivo(caminho_relativo=caminho_relativo)
     dicionario_resultados = {}
-    valor_procurado = random.randint(0, 99999)
 
     for i in range(num_loops):
         print(f"Iteração {i + 1} de {num_loops}", end="\r")  # \r para voltar ao início da linha
