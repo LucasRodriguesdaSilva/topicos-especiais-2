@@ -4,7 +4,7 @@ from utils.ler_arquivos import ler_arquivo
 from utils.salvar_dados import salvarInformacoes
 from utils.medir_uso_memoria import medirUsoMemoria
 from utils.dicionarios_utilizados import dicionarios_utilizados
-from utils.output_info import mensagemInicial, imprimirInfo
+from utils.output_info import mensagemInicial, imprimirInfo, mensagemConteudo
 import cProfile
 import os
 import psutil
@@ -38,7 +38,7 @@ def criarCaminhoOutput(pasta,tipo_lista, nome_instancia, algoritmo, valor_procur
 
 def main():
     colorama.init()  # Inicializar o colorama
-
+    mensagemInicial()
     caminhoAbsoluto = getCaminhoAbsoluto()
     algoritmo_utilizado = None
     caminho_relativo = None
@@ -85,7 +85,7 @@ def main():
     elif args.a == 'f':
         algoritmo_utilizado = None
 
-
+    mensagemConteudo()
     conteudo = ler_arquivo(caminho_relativo=caminho_relativo)
 
     for j in range(3):
@@ -96,7 +96,6 @@ def main():
         elif j == 2:
             valor_procurado = random.randint(0, 99999)
 
-        mensagemInicial()
         imprimirInfo(nome_algoritmo=nome_algoritmo, nome_instancia=nome_instancia, tipo_lista=tipo_lista, num_loops=num_loops, valor_procurado=valor_procurado)
 
         output = criarCaminhoOutput(pasta=pasta, tipo_lista=tipo_lista, nome_instancia=nome_instancia,algoritmo=args.a, valor_procurado=valor_procurado)
