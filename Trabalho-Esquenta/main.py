@@ -39,8 +39,6 @@ def criarCaminhoOutput(pasta,tipo_lista, nome_instancia, algoritmo, valor_procur
 def main():
     colorama.init()  # Inicializar o colorama
 
-    mensagemInicial()
-
     caminhoAbsoluto = getCaminhoAbsoluto()
     algoritmo_utilizado = None
     caminho_relativo = None
@@ -58,17 +56,17 @@ def main():
     tipo_lista = dicionarios['t'][args.t]
     num_loops = args.loop
 
-    if args.x < 0:
-        valor_procurado = random.randint(0, 99999)
-    else:
-        valor_procurado = args.x
+    # if args.x < 0:
+    #     valor_procurado = random.randint(0, 99999)
+    # else:
+    #     valor_procurado = args.x
 
     if args.loop < 1:
         num_loops = 100
     else:
         num_loops = args.loop
 
-    imprimirInfo(nome_algoritmo=nome_algoritmo, nome_instancia=nome_instancia, tipo_lista=tipo_lista, num_loops=num_loops, valor_procurado=valor_procurado)
+    
     caminho_relativo = contruirCaminhoInstancia(tipo_lista=tipo_lista, nome_instancia=nome_instancia)
 
 
@@ -87,33 +85,46 @@ def main():
     elif args.a == 'f':
         algoritmo_utilizado = None
 
-    output = criarCaminhoOutput(pasta=pasta, tipo_lista=tipo_lista, nome_instancia=nome_instancia,algoritmo=args.a, valor_procurado=valor_procurado)
 
     conteudo = ler_arquivo(caminho_relativo=caminho_relativo)
-    dicionario_resultados = {}
 
-    for i in range(num_loops):
-        print(f"Iteração {i + 1} de {num_loops}", end="\r")  # \r para voltar ao início da linha
+    for j in range(3):
+        if j == 0:
+            valor_procurado = conteudo[0]
+        elif j == 1: 
+            valor_procurado = conteudo[-1]
+        elif j == 2:
+            valor_procurado = random.randint(0, 99999)
 
-    
-        resultado, tempo_execucao, uso_memoria_inicio, uso_memoria_fim = medicoes(algoritmo_utilizado,valor_procurado,conteudo)
-        diferenca_memoria = uso_memoria_fim - uso_memoria_inicio
+        mensagemInicial()
+        imprimirInfo(nome_algoritmo=nome_algoritmo, nome_instancia=nome_instancia, tipo_lista=tipo_lista, num_loops=num_loops, valor_procurado=valor_procurado)
 
-        dicionario_resultados[i] = {
-            'tempo_execucao': tempo_execucao, 
-            'uso_inicial': uso_memoria_inicio, 
-            'uso_final': uso_memoria_fim, 
-            'uso_diferenca': diferenca_memoria,
-            'valor_procurado': valor_procurado,
-            'resultado_encontrado': resultado
-        }
+        output = criarCaminhoOutput(pasta=pasta, tipo_lista=tipo_lista, nome_instancia=nome_instancia,algoritmo=args.a, valor_procurado=valor_procurado)
 
-        time.sleep(0.1)  # Atraso 
-        print(" " * len(f"Iteração {i + 1} de {num_loops}"), end="\r")  # Limpar a linha
+        dicionario_resultados = {}
+        for i in range(num_loops):
+            print(f"Iteração {i + 1} de {num_loops}", end="\r")  # \r para voltar ao início da linha
+
+        
+            resultado, tempo_execucao, uso_memoria_inicio, uso_memoria_fim = medicoes(algoritmo_utilizado,valor_procurado,conteudo)
+            diferenca_memoria = uso_memoria_fim - uso_memoria_inicio
+
+            dicionario_resultados[i] = {
+                'tempo_execucao': tempo_execucao, 
+                'uso_inicial': uso_memoria_inicio, 
+                'uso_final': uso_memoria_fim, 
+                'uso_diferenca': diferenca_memoria,
+                'valor_procurado': valor_procurado,
+                'resultado_encontrado': resultado
+            }
+
+            time.sleep(0.1)  # Atraso 
+            print(" " * len(f"Iteração {i + 1} de {num_loops}"), end="\r")  # Limpar a linha
 
 
-    print(Fore.GREEN + "Concluído!" + Style.RESET_ALL)  # Imprimir concluído em verde
-    salvarInformacoes(dicionario=dicionario_resultados,caminhoAbsoluto=caminhoAbsoluto,pasta=output)
+        print(Fore.GREEN + "Concluído!" + Style.RESET_ALL)  # Imprimir concluído em verde
+        salvarInformacoes(dicionario=dicionario_resultados,caminhoAbsoluto=caminhoAbsoluto,pasta=output)
+        print('\n')
 
 if __name__ == "__main__":
     main()
