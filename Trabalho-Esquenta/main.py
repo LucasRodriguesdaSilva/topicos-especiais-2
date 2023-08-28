@@ -31,6 +31,11 @@ def medicoes(algoritmo, *args):
 
     return indice, tempo_execucao, uso_memoria_inicio, uso_memoria_fim
 
+def criarCaminhoOutput(pasta,tipo_lista, nome_instancia, algoritmo, valor_procurado):
+    valor_procurado = str(valor_procurado)
+    caminho_relativo = os.path.join(pasta, 'output',algoritmo,nome_instancia,tipo_lista,valor_procurado)
+    return caminho_relativo
+
 def main():
     colorama.init()  # Inicializar o colorama
 
@@ -53,10 +58,10 @@ def main():
     tipo_lista = dicionarios['t'][args.t]
     num_loops = args.loop
 
-    if args.n_busca < 0:
+    if args.x < 0:
         valor_procurado = random.randint(0, 99999)
     else:
-        valor_procurado = args.n_busca
+        valor_procurado = args.x
 
     if args.loop < 1:
         num_loops = 100
@@ -70,7 +75,7 @@ def main():
 
     if args.a == 'a':
         algoritmo_utilizado = BuscaLinearV1.busca_linear_v1
-        output = 'buscaLinearV1'
+        pasta = 'buscaLinearV1'
     elif args.a == 'b':
         algoritmo_utilizado = None
     elif args.a == 'c':
@@ -81,6 +86,8 @@ def main():
         algoritmo_utilizado = None
     elif args.a == 'f':
         algoritmo_utilizado = None
+
+    output = criarCaminhoOutput(pasta=pasta, tipo_lista=tipo_lista, nome_instancia=nome_instancia,algoritmo=args.a, valor_procurado=valor_procurado)
 
     conteudo = ler_arquivo(caminho_relativo=caminho_relativo)
     dicionario_resultados = {}
