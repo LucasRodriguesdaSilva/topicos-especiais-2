@@ -3,11 +3,10 @@ import csv
 
 def salvarInformacoes(dicionario,caminhoAbsoluto, pasta):
     nomeArquivo = 'dados.csv'
-    caminho_output = os.path.join(pasta, 'output', 'dados')
-    caminho_completo = os.path.join(caminhoAbsoluto, caminho_output, nomeArquivo)
+    caminho_completo = os.path.join(caminhoAbsoluto, pasta, nomeArquivo)
 
-    if not os.path.exists(caminho_output):
-        os.makedirs(caminho_output)
+    if not os.path.exists(pasta):
+        os.makedirs(pasta)
     
     with open(caminho_completo, 'w', newline='') as arquivo:
         colunas = ["Iteracao", "Uso de Memoria - Inicial (bytes)", 'Uso de Memoria - Final (bytes)', 'Uso de Memoria - Diferenca (bytes)', "Tempo de Execucao (s)", "Valor Procurado", "Indice no Vetor"] 
