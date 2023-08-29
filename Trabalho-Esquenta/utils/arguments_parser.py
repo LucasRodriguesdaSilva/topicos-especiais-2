@@ -1,6 +1,6 @@
 import argparse
 
-def parser_arguments():
+def parser_arguments_main():
     parser = argparse.ArgumentParser(description='Trabalho Esquenta - Experimentação de vários algoritmos de busca')
 
     parser.add_argument('--a', required=True, choices=['a','b','c','d','e','f'], help='Algoritmos para o experimento de acordo com o README.md')
@@ -14,3 +14,14 @@ def parser_arguments():
     # parser.add_argument('--x', type=int,default=-1, help='Número para busca, Padrão Aleatório')
 
     return parser.parse_args()
+
+
+def parser_arguments_plot():
+    parser = argparse.ArgumentParser(description='Trabalho Esquenta - Plotagem das Imagens')
+
+    parser.add_argument('--a', required=True, choices=['a','b','c','d','e','f'], help='Algoritmos para a plotagem dos gráficos de acordo com o README.md')
+
+    parser.add_argument('--t', required=True, choices=['o','no'], help='Tipo da instância utilizada de acordo com o README.md')
+
+    return parser.parse_args()
+    
