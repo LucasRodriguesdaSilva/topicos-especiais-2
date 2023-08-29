@@ -1,5 +1,5 @@
 from buscaLinearV1.busca_linear_v1 import BuscaLinearV1
-from utils.arguments_parser import parser_arguments
+from utils.arguments_parser import parser_arguments_main
 from utils.ler_arquivos import ler_arquivo
 from utils.salvar_dados import salvarInformacoes
 from utils.medir_uso_memoria import medirUsoMemoria
@@ -49,7 +49,7 @@ def main():
     num_loops = 1
     dicionarios = dicionarios_utilizados()
 
-    args = parser_arguments()
+    args = parser_arguments_main()
 
     nome_algoritmo = dicionarios['a'][args.a]
     nome_instancia = dicionarios['i'][args.i]
@@ -106,7 +106,7 @@ def main():
 
         
             resultado, tempo_execucao, uso_memoria_inicio, uso_memoria_fim = medicoes(algoritmo_utilizado,valor_procurado,conteudo)
-            diferenca_memoria = uso_memoria_fim - uso_memoria_inicio
+            diferenca_memoria = abs(uso_memoria_fim - uso_memoria_inicio)
 
             dicionario_resultados[i] = {
                 'tempo_execucao': tempo_execucao, 
