@@ -9,7 +9,7 @@ def parser_arguments_main():
     
     parser.add_argument('--t', required=True, choices=['o','no'], help='Tipo da instância a ser utilizada de acordo com o README.md')
     
-    parser.add_argument('--loop', type=int, default=100, help='Quantidade de vezes que o algoritmo sera executado, Padrão 100 iterações')
+    parser.add_argument('--loop', type=int, default=2, help='Quantidade de vezes que o algoritmo sera executado, Padrão 100 iterações')
 
     # parser.add_argument('--x', type=int,default=-1, help='Número para busca, Padrão Aleatório')
 
