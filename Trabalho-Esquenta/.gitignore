@@ -1,3 +1,5 @@
 utils/__pycache__
 utils/lista_nao_ordenada
 utils/lista_ordenada
+*/__pycache__
+__pycache__
