@@ -87,6 +87,7 @@ def main():
 
     mensagemConteudo()
     conteudo = ler_arquivo(caminho_relativo=caminho_relativo)
+    print('Instância na memória!')
 
     for j in range(3):
         if j == 0:
