@@ -24,7 +24,7 @@ def plotar_uso_memmoria(df, pasta_saida):
     plt.ylabel('Uso de Memória (bytes)')
     plt.title('Uso de Memória')
     plt.legend()
-    plt.xticks(df['Iteracao'][::10], df['Iteracao'][::10], rotation=45) 
+    plt.xticks(df['Iteracao'][::1], df['Iteracao'][::1], rotation=45) 
     plt.tight_layout()
     caminho_imagem = os.path.join(pasta_saida, 'uso_memoria.png')
     # Salvar o gráfico em um arquivo PNG
@@ -48,7 +48,7 @@ def plotar_tempo_execucao(df, pasta_saida):
     plt.ylabel('Tempo de Execução (s)')
     plt.title('Gráfico de Linha - Tempo de Execução')
     plt.legend()
-    plt.xticks(df['Iteracao'][::10], df['Iteracao'][::10], rotation=45) 
+    plt.xticks(df['Iteracao'][::1], df['Iteracao'][::1], rotation=45) 
     plt.tight_layout()
 
     caminho_imagem = os.path.join(pasta_saida, 'tempo_execucao.png')
