@@ -10,6 +10,7 @@ from utils.output_info import mensagemInicial, imprimirInfo, mensagemConteudo
 import cProfile
 import os
 import psutil
+import tracemalloc
 import random
 import time
 import colorama
@@ -27,14 +28,22 @@ def getCaminhoAbsoluto():
 
 
 def medicoes(algoritmo, *args):
-    uso_memoria_inicio = medirUsoMemoria()
+    # uso_memoria_inicio = medirUsoMemoria()
+    tracemalloc.start()
+    #Inicio do tempo
     inicio = time.time()
+    #Executa o algoritmo
     indice = algoritmo(*args)
+    #Termina a contagem do tempo
     fim = time.time()
     tempo_execucao = fim - inicio
-    uso_memoria_fim = medirUsoMemoria()
+    current, peak = tracemalloc.get_traced_memory()
+    tracemalloc.stop()
+    # uso_memoria_fim = medirUsoMemoria()
+    current = current / 10**6
+    peak = peak / 10**6
 
-    return indice, tempo_execucao, uso_memoria_inicio, uso_memoria_fim
+    return indice, tempo_execucao, current, peak
 
 def criarCaminhoOutput(pasta,tipo_lista, nome_instancia, algoritmo, valor_procurado):
     valor_procurado = str(valor_procurado)
@@ -118,18 +127,14 @@ def main():
                     meio = tam_conteudo // 2
                     valor_procurado = conteudo[meio]
 
-                resultado, tempo_execucao, uso_memoria_inicio, uso_memoria_fim = medicoes(algoritmo_utilizado,valor_procurado,conteudo,0,tam_conteudo)
+                resultado, tempo_execucao, uso_memoria_atual, uso_memoria_pico = medicoes(algoritmo_utilizado,valor_procurado,conteudo,0,tam_conteudo)
             else:
-                resultado, tempo_execucao, uso_memoria_inicio, uso_memoria_fim = medicoes(algoritmo_utilizado,valor_procurado,conteudo)
-
-        
-            diferenca_memoria = abs(uso_memoria_fim - uso_memoria_inicio)
+                resultado, tempo_execucao, uso_memoria_atual, uso_memoria_pico = medicoes(algoritmo_utilizado,valor_procurado,conteudo)
 
             dicionario_resultados[i] = {
                 'tempo_execucao': tempo_execucao, 
-                'uso_inicial': uso_memoria_inicio, 
-                'uso_final': uso_memoria_fim, 
-                'uso_diferenca': diferenca_memoria,
+                'uso_atual': uso_memoria_atual, 
+                'uso_pico': uso_memoria_pico,
                 'valor_procurado': valor_procurado,
                 'resultado_encontrado': resultado
             }

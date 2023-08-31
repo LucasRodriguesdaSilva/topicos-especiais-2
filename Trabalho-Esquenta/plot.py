@@ -7,7 +7,7 @@ from utils.dicionarios_utilizados import dicionarios_utilizados
 # camminho_absoluto = os.path.dirname(os.path.abspath(__file__))
 def plotar_uso_memmoria(df, pasta_saida):
      # Calcular a média do Uso de Memória - Inicial
-    media_memoria_inicial = df['Uso de Memoria - Inicial (bytes)'].mean() / (1024 ** 2)
+    media_memoria_inicial = df['Uso de Memoria - Pico (MB)'].mean()
 
     largura_polegadas = 8
     altura_polegadas = 6
@@ -16,12 +16,12 @@ def plotar_uso_memmoria(df, pasta_saida):
     fig, ax = plt.subplots(figsize=(largura_polegadas, altura_polegadas))
 
     # Plotar gráfico de linha para Uso de Memória
-    plt.plot(df['Iteracao'], df['Uso de Memoria - Inicial (bytes)'], label='Inicial', marker='o')
-    plt.plot(df['Iteracao'], df['Uso de Memoria - Final (bytes)'], label='Final', marker='x')
-    plt.plot(df['Iteracao'], df['Uso de Memoria - Diferenca (bytes)'], label='Diferença', marker='.')
+    plt.plot(df['Iteracao'], df["Uso de Memoria - atual (MB)"], label='Atual', marker='o')
+    plt.plot(df['Iteracao'], df['Uso de Memoria - Pico (MB)'], label='Pico', marker='x')
+    # plt.plot(df['Iteracao'], df['Uso de Memoria - Diferenca (bytes)'], label='Diferença', marker='.')
     plt.axhline(y=media_memoria_inicial, color='r', linestyle='--', label=f'Média: {media_memoria_inicial:.2f} Megabytes')
     plt.xlabel('Iteração')
-    plt.ylabel('Uso de Memória (bytes)')
+    plt.ylabel('Uso de Memória (MB)')
     plt.title('Uso de Memória')
     plt.legend()
     plt.xticks(df['Iteracao'][::1], df['Iteracao'][::1], rotation=45) 

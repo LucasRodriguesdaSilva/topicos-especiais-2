@@ -9,19 +9,18 @@ def salvarInformacoes(dicionario,caminhoAbsoluto, pasta):
         os.makedirs(pasta)
     
     with open(caminho_completo, 'w', newline='') as arquivo:
-        colunas = ["Iteracao", "Uso de Memoria - Inicial (bytes)", 'Uso de Memoria - Final (bytes)', 'Uso de Memoria - Diferenca (bytes)', "Tempo de Execucao (s)", "Valor Procurado", "Indice no Vetor"] 
+        colunas = ["Iteracao", "Uso de Memoria - atual (MB)", 'Uso de Memoria - Pico (MB)', "Tempo de Execucao (s)", "X", "Indice"] 
         escritor_csv = csv.DictWriter(arquivo, fieldnames=colunas)
         escritor_csv.writeheader()
         
         for iteracao, dados in dicionario.items():
             escritor_csv.writerow({
-                "Iteracao": iteracao,
-                "Uso de Memoria - Inicial (bytes)": dados["uso_inicial"],
-                "Uso de Memoria - Final (bytes)": dados["uso_final"],
-                "Uso de Memoria - Diferenca (bytes)": dados["uso_diferenca"],
-                "Tempo de Execucao (s)": dados["tempo_execucao"],
-                "Valor Procurado": dados['valor_procurado'] , 
-                "Indice no Vetor": dados['resultado_encontrado']
+                colunas[0]: iteracao,
+                colunas[1]: dados["uso_atual"],
+                colunas[2]: dados["uso_pico"],
+                colunas[3]: dados["tempo_execucao"],
+                colunas[4]: dados['valor_procurado'] , 
+                colunas[5]: dados['resultado_encontrado']
             })
 
     print(f'Dados salvos em {caminho_completo}')
