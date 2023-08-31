@@ -1,4 +1,5 @@
 from buscaLinearV1.busca_linear_v1 import BuscaLinearV1
+from buscaLinearV2.busca_linear_v2 import BuscaLinearV2
 from utils.arguments_parser import parser_arguments_main
 from utils.ler_arquivos import ler_arquivo
 from utils.salvar_dados import salvarInformacoes
@@ -75,7 +76,8 @@ def main():
         algoritmo_utilizado = BuscaLinearV1.busca_linear_v1
         pasta = 'buscaLinearV1'
     elif args.a == 'b':
-        algoritmo_utilizado = None
+        algoritmo_utilizado = BuscaLinearV2.busca_linear_v2
+        pasta = 'buscaLinearV2'
     elif args.a == 'c':
         algoritmo_utilizado = None
     elif args.a == 'd':
