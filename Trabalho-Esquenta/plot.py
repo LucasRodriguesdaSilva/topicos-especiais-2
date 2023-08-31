@@ -7,7 +7,9 @@ from utils.dicionarios_utilizados import dicionarios_utilizados
 # camminho_absoluto = os.path.dirname(os.path.abspath(__file__))
 def plotar_uso_memmoria(df, pasta_saida):
      # Calcular a média do Uso de Memória - Inicial
-    media_memoria_inicial = df['Uso de Memoria - Pico (MB)'].mean()
+    uso_memoria_atual = df["Uso de Memoria - atual (MB)"] 
+    uso_memoria_pico =   df['Uso de Memoria - Pico (MB)']
+    media_memoria_inicial = uso_memoria_pico.mean()
 
     largura_polegadas = 8
     altura_polegadas = 6
@@ -16,10 +18,10 @@ def plotar_uso_memmoria(df, pasta_saida):
     fig, ax = plt.subplots(figsize=(largura_polegadas, altura_polegadas))
 
     # Plotar gráfico de linha para Uso de Memória
-    plt.plot(df['Iteracao'], df["Uso de Memoria - atual (MB)"], label='Atual', marker='o')
-    plt.plot(df['Iteracao'], df['Uso de Memoria - Pico (MB)'], label='Pico', marker='x')
+    plt.plot(df['Iteracao'], uso_memoria_atual , label='Atual', marker='o')
+    plt.plot(df['Iteracao'], uso_memoria_pico , label='Pico', marker='x')
     # plt.plot(df['Iteracao'], df['Uso de Memoria - Diferenca (bytes)'], label='Diferença', marker='.')
-    plt.axhline(y=media_memoria_inicial, color='r', linestyle='--', label=f'Média: {media_memoria_inicial:.2f} Megabytes')
+    plt.axhline(y=media_memoria_inicial, color='r', linestyle='--', label=f'Média: {media_memoria_inicial:.5f} Megabytes')
     plt.xlabel('Iteração')
     plt.ylabel('Uso de Memória (MB)')
     plt.title('Uso de Memória')
@@ -43,7 +45,7 @@ def plotar_tempo_execucao(df, pasta_saida):
 
     # Plotar gráfico de linha para Tempo de Execução
     plt.plot(df['Iteracao'], df['Tempo de Execucao (s)'], marker='o')
-    plt.axhline(y=media_tempo_execucao, color='r', linestyle='--', label=f'Média: {media_tempo_execucao:.2f} segundos')
+    plt.axhline(y=media_tempo_execucao, color='r', linestyle='--', label=f'Média: {media_tempo_execucao:.5f} segundos')
     plt.xlabel('Iteração')
     plt.ylabel('Tempo de Execução (s)')
     plt.title('Gráfico de Linha - Tempo de Execução')
