@@ -92,7 +92,7 @@ def main():
     elif args.a == 'b':
         pasta = 'buscaLinearV2'
     elif args.a == 'c':
-        pasta = None
+        pasta = 'buscaBinaria'
     elif args.a == 'd':
         pasta = None
     elif args.a == 'e':
