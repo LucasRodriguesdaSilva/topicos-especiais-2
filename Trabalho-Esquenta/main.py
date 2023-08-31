@@ -1,5 +1,6 @@
 from buscaLinearV1.busca_linear_v1 import BuscaLinearV1
 from buscaLinearV2.busca_linear_v2 import BuscaLinearV2
+from buscaBinaria.busca_binaria import pesquisa_binaria
 from utils.arguments_parser import parser_arguments_main
 from utils.ler_arquivos import ler_arquivo
 from utils.salvar_dados import salvarInformacoes
@@ -27,7 +28,10 @@ def getCaminhoAbsoluto():
 
 def medicoes(algoritmo, *args):
     uso_memoria_inicio = medirUsoMemoria()
-    indice, tempo_execucao = algoritmo(*args)
+    inicio = time.time()
+    indice = algoritmo(*args)
+    fim = time.time()
+    tempo_execucao = fim - inicio
     uso_memoria_fim = medirUsoMemoria()
 
     return indice, tempo_execucao, uso_memoria_inicio, uso_memoria_fim
@@ -79,7 +83,8 @@ def main():
         algoritmo_utilizado = BuscaLinearV2.busca_linear_v2
         pasta = 'buscaLinearV2'
     elif args.a == 'c':
-        algoritmo_utilizado = None
+        algoritmo_utilizado = pesquisa_binaria
+        pasta = 'buscaBinaria'
     elif args.a == 'd':
         algoritmo_utilizado = None
     elif args.a == 'e':
@@ -107,8 +112,17 @@ def main():
         for i in range(num_loops):
             print(f"Iteração {i + 1} de {num_loops}", end="\r")  # \r para voltar ao início da linha
 
+            if args.a == 'c':
+                tam_conteudo = len(conteudo)
+                if j == 2:
+                    meio = tam_conteudo // 2
+                    valor_procurado = conteudo[meio]
+
+                resultado, tempo_execucao, uso_memoria_inicio, uso_memoria_fim = medicoes(algoritmo_utilizado,valor_procurado,conteudo,0,tam_conteudo)
+            else:
+                resultado, tempo_execucao, uso_memoria_inicio, uso_memoria_fim = medicoes(algoritmo_utilizado,valor_procurado,conteudo)
+
         
-            resultado, tempo_execucao, uso_memoria_inicio, uso_memoria_fim = medicoes(algoritmo_utilizado,valor_procurado,conteudo)
             diferenca_memoria = abs(uso_memoria_fim - uso_memoria_inicio)
 
             dicionario_resultados[i] = {
