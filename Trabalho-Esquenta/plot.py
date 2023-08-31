@@ -90,15 +90,15 @@ def main():
     if args.a == 'a':
         pasta = 'buscaLinearV1'
     elif args.a == 'b':
-        algoritmo_utilizado = None
+        pasta = 'buscaLinearV2'
     elif args.a == 'c':
-        algoritmo_utilizado = None
+        pasta = None
     elif args.a == 'd':
-        algoritmo_utilizado = None
+        pasta = None
     elif args.a == 'e':
-        algoritmo_utilizado = None
+        pasta = None
     elif args.a == 'f':
-        algoritmo_utilizado = None
+        pasta = None
 
     diretorio_base = getCaminhoOutput(pasta=pasta, algoritmo=args.a)
 
