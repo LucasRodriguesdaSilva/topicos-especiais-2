@@ -3,6 +3,7 @@ from buscaLinearV2.busca_linear_v2 import BuscaLinearV2
 from buscaBinaria.busca_binaria import pesquisa_binaria
 from buscaQuadratica.busca_quadratica import buscarQuadratica
 from buscaTernaria.buscar_ternaria import busca_ternaria
+from buscaCubica.busca_cubica import buscaCubica
 from utils.arguments_parser import parser_arguments_main
 from utils.ler_arquivos import ler_arquivo
 from utils.salvar_dados import salvarInformacoes
@@ -103,18 +104,19 @@ def main():
         algoritmo_utilizado = busca_ternaria
         pasta = 'buscaTernaria'
     elif args.a == 'f':
-        algoritmo_utilizado = None
+        algoritmo_utilizado = buscaCubica
+        pasta = 'buscaCubica'
 
     mensagemConteudo()
     conteudo = ler_arquivo(caminho_relativo=caminho_relativo)
     print('Instância na memória!')
 
     for j in range(3):
-        if j == 0 and args.a == 'd':
+        if j == 0 and (args.a == 'd' or args.a == 'f'):
             valor_procurado = random.randint(0, 99999)
         elif j == 0:
             valor_procurado = conteudo[0]
-        elif j == 1 and args.a == 'd':
+        elif j == 1 and (args.a == 'd' or args.a == 'f'):
             break
         elif j == 1: 
             valor_procurado = conteudo[-1]

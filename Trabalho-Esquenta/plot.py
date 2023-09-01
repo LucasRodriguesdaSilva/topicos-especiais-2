@@ -100,7 +100,7 @@ def main():
     elif args.a == 'e':
         pasta = 'buscaTernaria'
     elif args.a == 'f':
-        pasta = None
+        pasta = 'buscaCubica'
 
     diretorio_base = getCaminhoOutput(pasta=pasta, algoritmo=args.a)
 
