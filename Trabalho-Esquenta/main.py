@@ -2,6 +2,7 @@ from buscaLinearV1.busca_linear_v1 import BuscaLinearV1
 from buscaLinearV2.busca_linear_v2 import BuscaLinearV2
 from buscaBinaria.busca_binaria import pesquisa_binaria
 from buscaQuadratica.busca_quadratica import buscarQuadratica
+from buscaTernaria.buscar_ternaria import busca_ternaria
 from utils.arguments_parser import parser_arguments_main
 from utils.ler_arquivos import ler_arquivo
 from utils.salvar_dados import salvarInformacoes
@@ -99,7 +100,8 @@ def main():
         algoritmo_utilizado = buscarQuadratica
         pasta = 'buscaQuadratica'
     elif args.a == 'e':
-        algoritmo_utilizado = None
+        algoritmo_utilizado = busca_ternaria
+        pasta = 'buscaTernaria'
     elif args.a == 'f':
         algoritmo_utilizado = None
 

@@ -98,7 +98,7 @@ def main():
     elif args.a == 'd':
         pasta = 'buscaQuadratica'
     elif args.a == 'e':
-        pasta = None
+        pasta = 'buscaTernaria'
     elif args.a == 'f':
         pasta = None
 
