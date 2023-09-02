@@ -112,8 +112,12 @@ def main():
     print('Instância na memória!')
 
     for j in range(3):
-        if j == 0 and (args.a == 'd' or args.a == 'f'):
+        if j == 0 and args.a == 'd':
             valor_procurado = random.randint(0, 99999)
+        if j == 0 and args.a == 'f':
+            tam_conteudo = len(conteudo)
+            meio = tam_conteudo // 2
+            valor_procurado = conteudo[meio]
         elif j == 0:
             valor_procurado = conteudo[0]
         elif j == 1 and (args.a == 'd' or args.a == 'f'):
