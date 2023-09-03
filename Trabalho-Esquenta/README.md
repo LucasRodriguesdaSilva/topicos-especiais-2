@@ -1,65 +1,40 @@
-<table style="margin: auto;">
-    <thead style=''>
-        <tr>
-            <th style="text-align: center; vertical-align: middle;">
-                <img src="../Public/img/logo_ufc.png" alt="Logo UFC" width="50" height="50" />
-            <th>
-        </th>
-    </thead>
-    <tbody style='text-align: center;'>
-        <tr>
-            <td>UNIVERSIDADE FEDERAL DO CEARÁ – CAMPUS SOBRAL</td>
-        </tr>
-        <tr>
-            <td>CURSO DE ENGENHARIA DA COMPUTAÇÃO</td>
-        </tr>
-        <tr>
-            <td>DISCIPLINA: TÓPICOS ESPECIAIS EM COMPUTAÇÃO II</td>
-        </tr>
-        <tr>
-            <td>PROFESSOR: FISCHER JONATAS FERREIRA</td>
-        </tr>
-    </tbody>
-</table>
-
-##
-
-<br>
-
-<div style="text-align: center;">
+<div align='center'>
+    <img src="../Public/img/logo_ufc.png" alt="Logo UFC" width="50" height="50" />
     <h4>
-        TRABALHO ESQUENTA <br><br>
+        UNIVERSIDADE FEDERAL DO CEARÁ – CAMPUS SOBRAL
+    </h4>
+    <h4>
+       CURSO DE ENGENHARIA DA COMPUTAÇÃO
+    </h4>
+    <h4>
+       DISCIPLINA: TÓPICOS ESPECIAIS EM COMPUTAÇÃO II
+    </h4>
+    <h4>
+       PROFESSOR: FISCHER JONATAS FERREIRA
+    </h4>
+    <br><br><br>
+    <h4>
+        TRABALHO ESQUENTA
+    </h4>
+    <h4>
         EXPERIMENTAÇÃO DE ALGORITMOS DE BUSCA 
     </h4>
-</div>
-
-<br>
-
-##
-
-<br>
-
-<div style="text-align: right;">
-    <h4>LUCAS RODRIGUES DA SILVA - 428787 <br> </h4>
+    <br><br><br><br>
+    <div align='right'>
+        <h4>LUCAS RODRIGUES DA SILVA - 428787 <br> </h4>
+    </div>
+    <br><br><br><br>
+    <h4> SOBRAL - CE </h4>
+    <h4> 2023.2 </h4>
 </div>
 
 ##
 
 <br>
 
-<div style="text-align: center;">
-    <h4> SOBRAL - CE <br><br> 2023.2 </h4>
-</div>
-
-
-##
-
-<br>
-
-<div style="text-align: center;">
+<div align='center'>
     <h2> SUMÁRIO </h2>
 </div>
-
 <br>
 
 1. [INTRODUÇÃO](#intro)
