@@ -1,15 +1,75 @@
-# Esquenta: algoritmos de busca
+<table style="margin: auto;">
+    <thead style=''>
+        <tr>
+            <th style="text-align: center; vertical-align: middle;">
+                <img src="../Public/img/logo_ufc.png" alt="Logo UFC" width="50" height="50" />
+            <th>
+        </th>
+    </thead>
+    <tbody style='text-align: center;'>
+        <tr>
+            <td>UNIVERSIDADE FEDERAL DO CEARÁ – CAMPUS SOBRAL</td>
+        </tr>
+        <tr>
+            <td>CURSO DE ENGENHARIA DA COMPUTAÇÃO</td>
+        </tr>
+        <tr>
+            <td>DISCIPLINA: TÓPICOS ESPECIAIS EM COMPUTAÇÃO II</td>
+        </tr>
+        <tr>
+            <td>PROFESSOR: FISCHER JONATAS FERREIRA</td>
+        </tr>
+    </tbody>
+</table>
 
-## SUMÁRIO
+##
+
+<br>
+
+<div style="text-align: center;">
+    <h4>
+        TRABALHO ESQUENTA <br><br>
+        EXPERIMENTAÇÃO DE ALGORITMOS DE BUSCA 
+    </h4>
+</div>
+
+<br>
+
+##
+
+<br>
+
+<div style="text-align: right;">
+    <h4>LUCAS RODRIGUES DA SILVA - 428787 <br> </h4>
+</div>
+
+##
+
+<br>
+
+<div style="text-align: center;">
+    <h4> SOBRAL - CE <br><br> 2023.2 </h4>
+</div>
+
+
+##
+
+<br>
+
+<div style="text-align: center;">
+    <h2> SUMÁRIO </h2>
+</div>
+
+<br>
 
 1. [INTRODUÇÃO](#intro)
 2. DESENVOLVIMENTO
 3. [CONCLUSÃO](#conclusao)
 1. Tabelas
-    - [Tabela 01: Tempo Gasto - Ordenados](#tabela1) <br>
-    - [Tabela 02: Tempo Gasto - Não Ordenados](#tabela2)
-    - [Tabela 03: Consumo da Memória Gasta - Ordenados](#tabela3)
-    - [Tabela 04: Consumo da Memória Gasta - Não Ordenados](#tabela4)
+    - [Tabela 01: Média Geral do Tempo Gasto - Ordenados](#tabela1)
+    - [Tabela 02: Média Geral do Tempo Gasto - Não Ordenados](#tabela2)
+    - [Tabela 03: Média Geral do Consumo da Memória Gasta - Ordenados](#tabela3)
+    - [Tabela 04: Média Geral do Consumo da Memória Gasta - Não Ordenados](#tabela4)
 
 
 
@@ -26,7 +86,7 @@
 
 ## Tabelas
 
-### Tabela 01: Tempo Gasto - Ordenados
+### Tabela 01: Média Geral do Tempo Gasto - Ordenados
 <a id="tabela1"></a>
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
@@ -42,7 +102,7 @@
 
 ##
 
-### Tabela 02: Tempo Gasto - Não Ordenados
+### Tabela 02: Média Geral do Tempo Gasto - Não Ordenados
 <a id="tabela2"></a> 
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
@@ -56,7 +116,7 @@
 
 ##
 
-### Tabela 03: Consumo da Memória Gasta - Ordenados
+### Tabela 03: Média Geral do Consumo da Memória Gasta - Ordenados
 <a id="tabela3"></a> 
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
@@ -70,7 +130,7 @@
 **Busca Cúbica**|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
 ##
 
-### Tabela 04: Consumo da Memória Gasta - Não Ordenados
+### Tabela 04: Média Geral do Consumo da Memória Gasta - Não Ordenados
 <a id="tabela4"></a> 
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
