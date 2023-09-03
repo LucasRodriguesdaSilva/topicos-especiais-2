@@ -24,4 +24,18 @@ def parser_arguments_plot():
     parser.add_argument('--t', required=True, choices=['o','no'], help='Tipo da instância utilizada de acordo com o README.md')
 
     return parser.parse_args()
+
+def parser_arguments_medias():
+    parser = argparse.ArgumentParser(description='Trabalho Esquenta - Medias')
+
+    parser.add_argument('--t', required=True, choices=['o','no'], help='Tipo da instância utilizada de acordo com o README.md')
+
+    parser.add_argument('--a', required=True, choices=['a','b','c','d','e','f'], help='Algoritmos para a plotagem dos gráficos de acordo com o README.md')
+
+
+
+
+
+
+    return parser.parse_args()
     
