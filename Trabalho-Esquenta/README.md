@@ -272,16 +272,16 @@ peak = peak / 10**6
     <tbody>
         <tr>
             <td>
-                <img src='../Trabalho-Esquenta/mediaMemoria/img/o/Busca Linear v1_o.png' width="350" height="250">
+                <img src='../Trabalho-Esquenta/mediaMemoria/img/o/Busca Linear v1_O.png' width="350" height="250">
             </td>
             <td>
-                <img src='../Trabalho-Esquenta/mediaMemoria/img/o/Busca Linear v2_o.png' width="350" height="250">
+                <img src='../Trabalho-Esquenta/mediaMemoria/img/o/Busca Linear v2_O.png' width="350" height="250">
             </td>
             <td>
-                <img src='../Trabalho-Esquenta/mediaMemoria/img/no/Busca Linear v1_no.png' width="350" height="250">
+                <img src='../Trabalho-Esquenta/mediaMemoria/img/no/Busca Linear v1_NO.png' width="350" height="250">
             </td>
             <td>
-                <img src='../Trabalho-Esquenta/mediaMemoria/img/no/Busca Linear v2_no.png' width="350" height="250">
+                <img src='../Trabalho-Esquenta/mediaMemoria/img/no/Busca Linear v2_NO.png' width="350" height="250">
             </td>
         </tr>
     </tbody>
