@@ -779,9 +779,10 @@ peak = peak / 10**6
 ## 6. REFERÊNCIAS BIBLIOGRÁFICAS 
 <a id="ref"></a>
 
-
-[1] Semântico, Algoritmo de Busca, https://semantico.com.br/vocabulario/algoritmo-de-busca-2/. Acesso em: 31 agosto 2023
-
-[2] Mapoliveira, A importância dos algoritmos para um engenheiro de software, 2023. https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html Acesso em: 1 set. 2023
-
-[3] Runebook, Tracemalloc - Documentação Python, 2022, https://runebook.dev/pt/docs/python/library/tracemalloc Acesso em: 1 set. 2023
+<p align='justify'>
+    [1] Semântico, Algoritmo de Busca, https://semantico.com.br/vocabulario/algoritmo-de-busca-2/. Acesso em: 31 agosto 2023.
+    <br>
+    [2] Mapoliveira, A importância dos algoritmos para um engenheiro de software, 2023. https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html Acesso em: 1 set. 2023.
+    <br>
+    [3] Runebook, Tracemalloc - Documentação Python, 2022, https://runebook.dev/pt/docs/python/library/tracemalloc Acesso em: 1 set. 2023.
+</p>
