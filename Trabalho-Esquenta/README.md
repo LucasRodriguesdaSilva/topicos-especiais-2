@@ -244,8 +244,8 @@ peak = peak / 10**6
 <br>
 
 <table align='center'>
-    <caption>Médias do Tempo de Execução (s)</caption>
     <thead>
+        <tr><th colspan='4'>Médias do Tempo de Execução (s)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 2: Busca Linear V1 - Ordenado</th>
             <th style='text-align: center;'>Figura 3: Busca Linear V2 - Ordenado</th>
@@ -279,8 +279,8 @@ peak = peak / 10**6
 <br>
 
 <table align='center'>
-    <caption>Médias do Consumo de Memória (MB)</caption>
     <thead>
+        <tr><th colspan='4'>Médias do Consumo de Memória (MB)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 6: Busca Linear V1 - Ordenado</th>
             <th style='text-align: center;'>Figura 7: Busca Linear V2 - Ordenado</th>
@@ -336,8 +336,8 @@ peak = peak / 10**6
 
 
 <table align='center'>
-    <caption>Tempo de Execução (s)</caption>
     <thead>
+        <tr><th colspan='4'>Tempo de Execução (s)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 10: Busca Binária - Primeiro Elemento</th>
             <th style='text-align: center;'>Figura 11: Busca Binária - Último Elemento</th>
@@ -371,8 +371,8 @@ peak = peak / 10**6
 <br>
 
 <table align='center'>
-    <caption>Consumo de Memória (MB)</caption>
     <thead>
+        <tr><th colspan='4'>Consumo de Memória (MB)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 14: Busca Binária - Primeiro Elemento</th>
             <th style='text-align: center;'>Figura 15: Busca Binária - Último Elemento</th>
@@ -422,13 +422,13 @@ peak = peak / 10**6
 - Um valor aleatório.
 
 <p align='justify'>
-&nbsp; As figuras 18, 19, 21 e 22 mostram os tempos de execução e consumo de memória para a instância 13, já as figuras 20 e 23 mostram as médias para cada instância. Analisando essas figuras mencionadas, pode-se observar que para o primeiro elemento, o tempo de execução é relativamente rápido em comparação com um elemento aleatório, visto que o algoritmo tem dois loops aninhados. O consumo de memória começa alto e depois vai decaindo. Este consumo inicial pode se dar por vários fatores que pode não estar relacionado diretamente com o algoritmo em si. 
+&nbsp; As figuras 18, 19, 21 e 22 mostram os tempos de execução e consumo de memória para a décima terceira instância, já as figuras 20 e 23 mostram as médias para cada instância. Analisando essas figuras mencionadas, pode-se observar que para o primeiro elemento, o tempo de execução é relativamente rápido em comparação com um elemento aleatório, visto que o algoritmo tem dois loops aninhados. O consumo de memória começa alto e depois vai decaindo. Este consumo inicial pode se dar por vários fatores que pode não estar relacionado diretamente com o algoritmo em si. 
 </p>
 
  
 <table align='center'>
-    <caption>Tempo de Execução (s)</caption>
     <thead>
+        <tr><th colspan='3'>Tempo de Execução (s)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 18: Busca Quadrática - Primeiro Elemento</th>
             <th style='text-align: center;'>Figura 19: Busca Quadrática - Elemento Aleatório </th>
@@ -458,8 +458,8 @@ peak = peak / 10**6
 <br>
 
 <table align='center'>
-    <caption>Consumo de Memória (MB)</caption>
     <thead>
+        <tr><th colspan='3'>Consumo de Memória (MB)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 21: Busca Quadrática - Primeiro Elemento</th>
             <th style='text-align: center;'>Figura 22: Busca Quadrática - Elemento Aleatório</th>
@@ -487,7 +487,7 @@ peak = peak / 10**6
 </table>
 
 <p align='justify'>
-&nbsp; Ao observar as médias dos tempos de execução, pode-se notar que há variações no decorrer das instâncias e com o aumento do tamanho da lista, o tempo de execução é aumentado consideravelmente, podendo passar horas executando. Para o consumo de memória, também há variações, mas pode-se concluir que ao aumentar a lista o consumo também aumenta. Em comparação aos outros, esse algoritmo é pior, mas ele pode ser otimizado para melhor eficiência, reduzindo o número de loops aninhados. Isso pode reduzir a complexidade de tempo.
+&nbsp; Ao observar as médias dos tempos de execução, pode-se notar que há variações no decorrer das instâncias e com o aumento do tamanho da lista, o tempo de execução é aumentado consideravelmente, podendo passar horas executando. Para o consumo de memória, também há variações, mas pode-se concluir que ao aumentar a lista o consumo também aumenta. Em comparação aos outros algoritmos mencionados, esse é o menos eficiente, mas ele pode ser otimizado para melhor eficiência, reduzindo o número de loops aninhados.
 </p>
 
 
@@ -518,8 +518,8 @@ peak = peak / 10**6
 
 
 <table align='center'>
-    <caption>Tempo de Execução (s)</caption>
     <thead>
+        <tr><th colspan='4'>Tempo de Execução (s)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 24: Busca Binária - Primeiro Elemento</th>
             <th style='text-align: center;'>Figura 25: Busca Binária - Último Elemento</th>
@@ -553,8 +553,8 @@ peak = peak / 10**6
 <br>
 
 <table align='center'>
-    <caption>Consumo de Memória (MB)</caption>
     <thead>
+        <tr><th colspan='4'>Consumo de Memória (MB)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 28: Busca Binária - Primeiro Elemento</th>
             <th style='text-align: center;'>Figura 29: Busca Binária - Último Elemento</th>
@@ -606,8 +606,8 @@ peak = peak / 10**6
 
 
 <table align='center'>
-    <caption>Tempo de Execução (s)</caption>
     <thead>
+        <tr><th colspan='2'>Tempo de Execução (s)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 32: Busca Cúbica - Elemento do Meio</th>
             <th style='text-align: center;'>Figura 33: Busca Cúbica - Média das instâncias</th>
@@ -633,8 +633,8 @@ peak = peak / 10**6
 <br>
 
 <table align='center'>
-    <caption>Consumo de Memória (MB)</caption>
     <thead>
+        <tr><th colspan='2'>Consumo de Memória (MB)</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 34: Busca Cúbica - Elemento do Meio</th>
             <th style='text-align: center;'>Figura 35: Busca Cúbica - Média das instâncias</th>
@@ -657,7 +657,7 @@ peak = peak / 10**6
     </tfoot>
 </table>
 
-### 4.6 Resumo Geral dos Experimentos
+### 4.6. Resumo Geral dos Experimentos
 <a id="res_geral"></a>
 
 <p align='justify'>
@@ -725,7 +725,7 @@ peak = peak / 10**6
 **Busca Cúbica**|0.00037|0.00037|0.00052|0.00052|0.00051|0.00052|0.00052|0.00112|0.00113|0.00210|0.00213|0.00513|0.00613|
 ###### Fonte: Próprio Autor.
 
-### 4.7 Resumo Geral dos Experimentos - Gráficos
+### 4.7. Resumo Geral dos Experimentos - Gráficos
 <a id="res_geral_graf"></a> 
 
 <p align='justify'>
@@ -733,8 +733,8 @@ peak = peak / 10**6
 </p>
 
 <table align='center'>
-    <caption>Histograma dos resultados obtidos</caption>
     <thead>
+        <tr><th colspan='2'>Histograma dos resultados obtidos</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 36: Media Geral dos Tempos de Execução</th>
             <th style='text-align: center;'>Figura 37: Media Geral dos Consumo de Memória</th>
@@ -763,7 +763,7 @@ peak = peak / 10**6
 
 
 <p align='justify'>
-&nbsp; A experimentação e análise de algoritmos desempenham um papel fundamental na seleção apropriada de abordagens computacionais em cenários do mundo real. Um fator crítico a ser considerado nesse processo é a complexidade no pior caso de um algoritmo, pois isso influencia diretamente sua eficiência.
+&nbsp; A experimentação e análise de algoritmos desempenham um papel fundamental na seleção apropriada de abordagens computacionais em cenários do mundo real. Um fator crítico a ser considerado nesse processo é a complexidade no pior caso de um algoritmo, pois isso influencia diretamente em sua eficiência.
 </p>
 
 <p align='justify'>
