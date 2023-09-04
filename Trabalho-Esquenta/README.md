@@ -39,14 +39,22 @@
 
 <br>
 
-1. [1. INTRODUÇÃO](#intro)
-2. DESENVOLVIMENTO
-3. [CONCLUSÃO](#conclusao)
-1. Tabelas
-    - [Tabela 01: Média Geral do Tempo Gasto - Ordenados](#tabela1)
-    - [Tabela 02: Média Geral do Tempo Gasto - Não Ordenados](#tabela2)
-    - [Tabela 03: Média Geral do Consumo da Memória Gasta - Ordenados](#tabela3)
-    - [Tabela 04: Média Geral do Consumo da Memória Gasta - Não Ordenados](#tabela4)
+1. [INTRODUÇÃO](#intro)
+2. [OBJETIVOS](#obj)
+3. [MATERIAIS E MÉTODOS](#mat_met)
+    - [Tabela 1: Configurações da Máquina Utilizada](#tabel1)
+    - [Trecho de Código 1: Cálculos de Tempo de Execução e Memória](#cod1)
+4. [ANÁLISE DOS ALGORITMOS](#analise)
+    - [Busca Linear V1 e V2 O(n)](#busca_linear)
+    - [Busca Binária O(log n)](#busca_bin)
+    - [Busca Quadrática O($n^2$)](#busca_quad)
+    - [Busca Ternária O(log n)](#busca_ter)
+    - [Busca Cúbica - Tripla Checagem O($n^3$)](#busca_cub)
+    - [Resumo Geral dos Experimentos - Tabelas](#res_geral)
+    - [Resumo Geral dos Experimentos - Gráficos](#res_geral_graf)
+5. [CONCLUSÃO](#conclusao)
+6. [REFERÊNCIAS BIBLIOGRÁFICAS](#ref)
+   
 
 
 ##
@@ -71,15 +79,20 @@
 
 <table align='center'>
     <caption>Figura 1: Complexidade dos Algoritmos</caption>
-<tr><td><img src='../Public/img/complexidade_alg.jpg' width="250" height="250"></td> <tr>
+    <tr>
+        <td>
+            <img src='../Public/img/complexidade_alg.jpg' width="250" height="250">
+        </td>
+    <tr>
 <tfoot>
     <tr>
-      <td style='font-size: 11px;'  colspan='3'>Fonte: <a href='https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html'>mapoliveira.blogspot.com</a></td>
+      <td style='font-size: 11px;'>Fonte: <a href='https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html'>mapoliveira.blogspot.com</a></td>
     </tr>
   </tfoot>
 </table>
 
 ## 2. OBJETIVOS DO EXPERIMENTO
+<a id="obj"></a>
 
 - Comparar resultados de diferentes algoritmos de busca;
 - Analisar o comportamento e desempenho;
@@ -88,6 +101,7 @@
 
 
 ## 3. MATERIAIS E MÉTODOS
+<a id="mat_met"></a>
 
 <P align='justify'>
 &nbsp; Para a realização do experimento proposto, utilizou-se a linguagem de programação Python, por ter uma extensa gama de bibliotecas e ser voltada para análise de dados, o que permite a utilização de uma grande quantidade de dados, além da sua versatilidade e facilidade de uso. As configurações da máquina que rodou os experimentos está listada na tabela 1.
@@ -135,7 +149,8 @@
 &nbsp; Para calcular o tempo de execução utilizou-se o módulo time, já para calcular o consumo de memória utilizou-se o módulo tracemalloc, que é uma ferramenta de depuração para rastrear blocos de memória atribuídos por Python. Assim, esses cálculos são mostrados no trecho de código 1.
 </p>
 
-#### Trecho de código 1: Cálculos de Tempo de Execução e Memória
+#### 3.1 Trecho de código 1: Cálculos de Tempo de Execução e Memória
+<a id="cod1"></a>
 
 ```
 #Inicia o tracemalloc
@@ -166,6 +181,7 @@ peak = peak / 10**6
 
 
 ## 4. ANÁLISE DOS ALGORITMOS
+<a id="analise"></a>
 
 <p align='justify'>
 &nbsp; Para esta análise, foram utilizando os seguintes algoritmos:
@@ -183,6 +199,7 @@ peak = peak / 10**6
 </p>
 
 ### 4.1. Busca Linear V1 e V2 O(n)
+<a id="busca_linear"></a>
 
 <p align='justify'>
 &nbsp; O primeiro algoritmo experimentado foi o busca linear, onde sua execução percorre todo a lista para encontrar o índice do valor procurado.
@@ -252,7 +269,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='4'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -287,7 +304,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='4'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -298,6 +315,7 @@ peak = peak / 10**6
 
 
 ### 4.2. Busca Binária O(log n)
+<a id="busca_bin"></a>
 
 <p align='justify'>
 &nbsp; A busca Binária tem como padrão dividir para conquistar, onde nesse algoritmo é dividido repetidamente o intervalo de busca ao meio, reduzindo pela metade o número de elementos a serem verificados a cada iteração. Isso torna o algoritmo significativamente mais rápido do que a busca linear em vetores grandes, mas a sua desvantagem é que o vetor deve estar ordenado para funcionar corretamente.
@@ -343,7 +361,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='4'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -378,7 +396,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='4'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -388,6 +406,7 @@ peak = peak / 10**6
 </p>
 
 ### 4.3. Busca Quadrática com Contagem de Repetição de Elementos O($n^2$)
+<a id="busca_quad"></a>
 
 <p align='justify'>
 &nbsp; Este algoritmo busca o elemento na lista e retorna a primeira posição onde ele é encontrado, fazendo também uma contagem de quantas vezes o elemento ocorreu na lista.
@@ -471,54 +490,180 @@ peak = peak / 10**6
 
 
 
+### 4.4. Busca Ternária O(log n)
+<a id="busca_ter"></a>
+
+<p align='justify'>
+&nbsp; Este algoritmo é parecido com a busca binária, mas em vez de dividir em duas partes, é dividido repetidamente a lista em três partes aproximadamente iguais. Com isso faz-se uma verificação do elemento de procura nas partes esquerda, direita e central. Isso permite uma busca eficiente em vetores ordenados, reduzindo pela metade o espaço de busca a cada iteração.
+</p>
 
 
+<p align='justify'>
+&nbsp; Para o experimento deste algoritmo foi utilizado 10 iterações para cada instância, e os números procurados foram do tipo:
+</p>
 
+- Primeiro elemento
+- Elemento Aleatório
+- Último Elemento
 
+<p align='justify'>
+&nbsp; Como não havia restrições de busca, então foi escolhido esse modelo de valores para procura. Assim, observando a figura 27, pode-se notar que o tempo médio de execução do algoritmo é constante para qualquer tamanho de lista. Já o consumo de memória tem picos, mas ao passar das iterações fica constante. Na média o consumo é crescente, mas nota-se que a partir da instância 5, este fica constante.
+</p>
 
+<p align='justify'>
+&nbsp; Comparativamente aos algoritmos previamente discutidos, a busca ternária destaca-se como a opção mais eficiente, especialmente no que diz respeito ao consumo de memória. Este algoritmo supera até mesmo a busca binária, uma vez que não recorre à recursividade durante a sua execução.
+</p>
 
-
-<p align='justify'>&nbsp; </p>
-<p align='justify'>&nbsp; </p>
-<p align='justify'>&nbsp; </p>
-<p align='justify'>&nbsp; </p>
 
 <table align='center'>
-    <caption>Médias do ..</caption>
+    <caption>Tempo de Execução (s)</caption>
     <thead>
-        <tr>
-            <th style='text-align: center;'>Figura x: </th>
-            <th style='text-align: center;'>Figura y: </th>
+        <tr >
+            <th style='text-align: center;'>Figura 24: Busca Binária - Primeiro Elemento</th>
+            <th style='text-align: center;'>Figura 25: Busca Binária - Último Elemento</th>
+            <th style='text-align: center;'>Figura 26: Busca Binária - Elemento Aleatório</th>
+            <th style='text-align: center;'>Figura 27: Busca Binária - Média das instâncias</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <img src='' width="250" height="250">
+                <img src='../Trabalho-Esquenta/buscaTernaria/output/e/100000000/lista_ordenada/1/imagens/tempo_execucao.png' width="350" height="250">
             </td>
             <td>
-                <img src='' width="250" height="250">
+                <img src='../Trabalho-Esquenta/buscaTernaria/output/e/100000000/lista_ordenada/100000000/imagens/tempo_execucao.png' width="350" height="250">
+            </td>
+            <td>
+                <img src='../Trabalho-Esquenta/buscaTernaria/output/e/100000000/lista_ordenada/19583/imagens/tempo_execucao.png' width="350" height="250">
+            </td>
+            <td>
+                <img src='../Trabalho-Esquenta/mediaExecucao/img/o/Busca Ternária_o.png' width="350" height="250">
             </td>
         </tr>
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='4'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
 
-## DESENVOLVIMENTO
-<a id="desv"></a>
+<br>
 
-## CONCLUSÃO
-<a id="conclusao"></a>
+<table align='center'>
+    <caption>Consumo de Memória (MB)</caption>
+    <thead>
+        <tr >
+            <th style='text-align: center;'>Figura 28: Busca Binária - Primeiro Elemento</th>
+            <th style='text-align: center;'>Figura 29: Busca Binária - Último Elemento</th>
+            <th style='text-align: center;'>Figura 30: Busca Binária - Elemento Aleatório</th>
+            <th style='text-align: center;'>Figura 31: Busca Binária - Média das instâncias</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src='../Trabalho-Esquenta/buscaTernaria/output/e/100000000/lista_ordenada/1/imagens/uso_memoria.png' width="350" height="250">
+            </td>
+            <td>
+                <img src='../Trabalho-Esquenta/buscaTernaria/output/e/100000000/lista_ordenada/100000000/imagens/uso_memoria.png' width="350" height="250">
+            </td>
+            <td>
+                <img src='../Trabalho-Esquenta/buscaTernaria/output/e/100000000/lista_ordenada/19583/imagens/uso_memoria.png' width="350" height="250">
+            </td>
+            <td>
+                <img src='../Trabalho-Esquenta/mediaMemoria/img/o/Busca Ternária_O.png' width="350" height="250">
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td style='font-size: 11px;'  colspan='4'>Fonte: Próprio autor.</td>
+        </tr>
+    </tfoot>
+</table>
 
-## Tabelas
-<a id="tabelasResumo"></a>
 
-#### Tabela 01: Média Geral do Tempo Gasto - Ordenados
-<a id="tabela12"></a>
+
+
+### 4.5. Busca Cúbica - Tripla Checagem O($n^3$)
+<a id="busca_cub"></a>
+
+<p align='justify'>
+&nbsp; Este algoritmo procura por um elemento na lista, fazendo uma tripla checagem para verificar se ele realmente está na lista, se estiver retorna a posição inicial onde o elemento foi encontrado, caso contrário retorna -1. Este é um algoritmo de exemplo para demonstrar complexidade O(n<sup>3</sup>).
+</p>
+
+
+<p align='justify'>
+&nbsp; Para o experimento foi utilizado somente duas iterações para cada instância, devido ao tempo que demora para concluir a execução. O valor procurado foi somente o elemento central.
+</p>
+
+<p align='justify'>
+&nbsp; Ao observar as figuras 33 e 35, pode-se notar que em comparação com a busca quadrática, este algoritmo se destaca de forma desfavorável devido ao seu elevado tempo de execução, podendo levar horas para concluir. Além disso, ele apresenta um consumo de memória significativo, que aumenta consideravelmente com o aumento das instâncias de busca, onde esse aumento ocorre a partir da nona instância. Portanto entre todos os algoritmos apresentados, este se posiciona como o menos eficiente, em consonância com sua complexidade computacional O(n<sup>3</sup>)
+</p>
+
+
+<table align='center'>
+    <caption>Tempo de Execução (s)</caption>
+    <thead>
+        <tr >
+            <th style='text-align: center;'>Figura 32: Busca Cúbica - Elemento do Meio</th>
+            <th style='text-align: center;'>Figura 33: Busca Cúbica - Média das instâncias</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src='../Trabalho-Esquenta/buscaCubica/output/f/100000000/lista_nao_ordenada/34306736/imagens/tempo_execucao.png' width="350" height="250">
+            </td>
+            <td>
+                <img src='../Trabalho-Esquenta/mediaExecucao/img/no/Busca Cúbica_no.png' width="350" height="250">
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td style='font-size: 11px;'  colspan='2'>Fonte: Próprio autor.</td>
+        </tr>
+    </tfoot>
+</table>
+
+<br>
+
+<table align='center'>
+    <caption>Consumo de Memória (MB)</caption>
+    <thead>
+        <tr >
+            <th style='text-align: center;'>Figura 34: Busca Cúbica - Elemento do Meio</th>
+            <th style='text-align: center;'>Figura 35: Busca Cúbica - Média das instâncias</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src='../Trabalho-Esquenta/buscaCubica/output/f/100000000/lista_nao_ordenada/34306736/imagens/uso_memoria.png' width="350" height="250">
+            </td>
+            <td>
+                <img src='../Trabalho-Esquenta/mediaMemoria/img/no/Busca Cúbica_NO.png' width="350" height="250">
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td style='font-size: 11px;'  colspan='2'>Fonte: Próprio autor.</td>
+        </tr>
+    </tfoot>
+</table>
+
+### 4.6 Resumo Geral dos Experimentos
+<a id="res_geral"></a>
+
+<p align='justify'>
+&nbsp; As tabelas 2, 3, 4 e 5 mostram um resumo geral dos experimentos feitos para cada instância e cada algoritmo utilizado. Nas linhas onde contém um traço (-), indica que o algoritmo não foi executado para o tipo da lista
+</p>
+
+#### Tabela 02: Média Geral do Tempo Gasto - Ordenados
+<a id="tabela2"></a>
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
 :--------------------:|:--------------------------:|:--------------------:|:---------------------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:
@@ -534,8 +679,8 @@ peak = peak / 10**6
 
 ##
 
-### Tabela 02: Média Geral do Tempo Gasto - Não Ordenados
-<a id="tabela2"></a> 
+### Tabela 03: Média Geral do Tempo Gasto - Não Ordenados
+<a id="tabela3"></a> 
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
 :--------------------:|:--------------------------:|:--------------------:|:---------------------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:
@@ -549,8 +694,8 @@ peak = peak / 10**6
 
 ##
 
-### Tabela 03: Média Geral do Consumo da Memória Gasta - Ordenados
-<a id="tabela3"></a> 
+### Tabela 04: Média Geral do Consumo da Memória Gasta - Ordenados
+<a id="tabela4"></a> 
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
 :--------------------:|:--------------------------:|:--------------------:|:---------------------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:
@@ -565,8 +710,8 @@ peak = peak / 10**6
 
 ##
 
-### Tabela 04: Média Geral do Consumo da Memória Gasta - Não Ordenados
-<a id="tabela4"></a> 
+### Tabela 05: Média Geral do Consumo da Memória Gasta - Não Ordenados
+<a id="tabela5"></a> 
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
 :--------------------:|:--------------------------:|:--------------------:|:---------------------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:
@@ -578,19 +723,63 @@ peak = peak / 10**6
 **Busca Cúbica**|0.00037|0.00037|0.00052|0.00052|0.00051|0.00052|0.00052|0.00112|0.00113|0.00210|0.00213|0.00513|0.00613|
 ###### Fonte: Próprio Autor.
 
+### 4.7 Resumo Geral dos Experimentos - Gráficos
+<a id="res_geral_graf"></a> 
 
-###### OBS 1: O traço (-) Indica que o algoritmo não foi executado Para o Tipo da Lista
-###### OBS 2: O **X** indica o número procurado 
+<p align='justify'>
+&nbsp; As figuras 36 e 37 mostram o histograma dos resultados obtidos nas tabelas 2, 3, 4 e 5.
+</p>
+
+<table align='center'>
+    <caption>Histograma dos resultados obtidos</caption>
+    <thead>
+        <tr >
+            <th style='text-align: center;'>Figura 36: Media Geral dos Tempos de Execução</th>
+            <th style='text-align: center;'>Figura 37: Media Geral dos Consumo de Memória</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img src='../Trabalho-Esquenta/mediaExecucao/execucao_mediaGeral.png' width="350" height="250">
+            </td>
+            <td>
+                <img src='../Trabalho-Esquenta/mediaMemoria/memoria_mediaGeral.png' width="350" height="250">
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td style='font-size: 11px;'  colspan='2'>Fonte: Próprio autor.</td>
+        </tr>
+    </tfoot>
+</table>
+
+
+## 5. CONCLUSÃO
+<a id="conclusao"></a>
+
+
+<p align='justify'>
+&nbsp; A experimentação e análise de algoritmos desempenham um papel fundamental na seleção apropriada de abordagens computacionais em cenários do mundo real. Um fator crítico a ser considerado nesse processo é a complexidade no pior caso de um algoritmo, pois isso influencia diretamente sua eficiência.
+</p>
+
+<p align='justify'>
+&nbsp; Os resultados obtidos neste estudo revelam que, em muitos casos, a escolha de um algoritmo eficiente pode levar a economias significativas de recursos computacionais. Nesse contexto, a busca ternária se destaca como o algoritmo de melhor eficiência em termos de tempo de execução e consumo de memória entre os algoritmos analisados.
+</p>
+
+<p align='justify'>
+&nbsp; Portanto, ao enfrentar desafios computacionais no mundo real, a avaliação cuidadosa da complexidade no pior caso e a escolha de algoritmos eficientes desempenham um papel crucial na otimização do desempenho e na gestão eficaz dos recursos computacionais.
+</p>
 
 
 
+## 6. REFERÊNCIAS BIBLIOGRÁFICAS 
+<a id="ref"></a>
 
 
-referencias 
+[1] Semântico, Algoritmo de Busca, https://semantico.com.br/vocabulario/algoritmo-de-busca-2/. Acesso em: 31 agosto 2023
 
+[2] Mapoliveira, A importância dos algoritmos para um engenheiro de software, 2023. https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html Acesso em: 1 set. 2023
 
-https://semantico.com.br/vocabulario/algoritmo-de-busca-2/
-
-https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html
-
-https://runebook.dev/pt/docs/python/library/tracemalloc
+[3] Runebook, Tracemalloc - Documentação Python, 2022, https://runebook.dev/pt/docs/python/library/tracemalloc Acesso em: 1 set. 2023
