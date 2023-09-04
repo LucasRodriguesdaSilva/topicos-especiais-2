@@ -65,7 +65,7 @@
 <a id="intro"></a>
 
 <p align='justify'>
-&nbsp; Em ciência da computação, algoritmos de busca, em termos gerais, toma um problema como entrada e retorna a sua solução. [1] Estes algoritmos permitem encontrar um elemento em uma coleção de dados, como listas, árvores ou grafos. Alguns exemplos são citados abaixo:
+&nbsp; Em ciência da computação, algoritmos de busca, em termos gerais, toma um problema como entrada e retorna a sua solução[1]. Estes algoritmos permitem encontrar um elemento em uma coleção de dados, como listas, árvores ou grafos. Alguns exemplos são citados abaixo:
 </p>
 
 - Busca Linear;
@@ -74,11 +74,11 @@
 - Busca em Largura.
 
 <p align='justify'>
-&nbsp; Cada algoritmo tem sua complexidade, sendo esta uma medida que indica o quanto as operações computacionais consome recursos. A complexidade de um algoritmo pode ser analisada no melhor, pior ou médio caso de execução, podendo variar, no pior caso, de O(1) à O(n!). A figura 1 mostra o tempo necessário (em teoria) para o algoritmo terminar sua execução.
+&nbsp; Cada algoritmo tem sua complexidade, sendo esta uma medida que indica o quanto as operações computacionais consome recursos. A complexidade de um algoritmo pode ser analisada no melhor, pior ou médio caso de execução, podendo variar, no pior caso, de O(1) à O(n!). A figura 1 mostra o tempo necessário (em teoria) para um algoritmo terminar sua execução, de acordo com a complexidade.
 </p>
 
 <table align='center'>
-    <caption>Figura 1: Complexidade dos Algoritmos</caption>
+    <caption style='text-align: center;'>Figura 1: Complexidade dos Algoritmos</caption>
     <tr>
         <td>
             <img src='../Public/img/complexidade_alg.jpg' width="250" height="250">
@@ -97,7 +97,7 @@
 - Comparar resultados de diferentes algoritmos de busca;
 - Analisar o comportamento e desempenho;
 - Avaliar o desempenho e a eficiência dos algoritmos de busca e;
-- Identificar as vantagens e desvantagens de cada um
+- Identificar as vantagens e desvantagens de cada um.
 
 
 ## 3. MATERIAIS E MÉTODOS
@@ -129,7 +129,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio Autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
         </tr>
   </tfoot>
 </table>
@@ -139,14 +139,14 @@
 
 
 <p align='justify'>
-&nbsp; O experimento visa analisar o tempo de execução e o consumo de memória gasta pelo algoritmo de busca, dando maior foco no pior caso do algoritmo. Os dados utilizados para busca foi disponibilizado anteriormente, mas é possível gerar novos dados utilizando os arquivos:
+&nbsp; Os experimentos realizados, visam analisar os tempos de execução e o consumo de memória gasta pelos algoritmos de busca, dando maior foco no pior caso. Os dados utilizados para busca foi disponibilizado anteriormente, mas é possível gerar novos dados utilizando os arquivos:
 </p>
 
 - [Gerar Lista Ordenada](gerar_lista_ordenada.py)
 - [Gerar Lista Não Ordenada](gerar_lista_nao_ordenada.py)
 
 <p align='justify'>
-&nbsp; Para calcular o tempo de execução utilizou-se o módulo time, já para calcular o consumo de memória utilizou-se o módulo tracemalloc, que é uma ferramenta de depuração para rastrear blocos de memória atribuídos por Python. Assim, esses cálculos são mostrados no trecho de código 1.
+&nbsp; Para calcular o tempo de execução utilizou-se o módulo time, já para calcular o consumo de memória utilizou-se o módulo tracemalloc, que é uma ferramenta de depuração para rastrear blocos de memória atribuídos por Python [3]. Assim, esses cálculos são mostrados no trecho de código 1.
 </p>
 
 #### 3.1 Trecho de código 1: Cálculos de Tempo de Execução e Memória
@@ -172,11 +172,11 @@ current = current / 10**6
 peak = peak / 10**6
 ```
 <p align='justify'>
-&nbsp; Onde <code>Current</code> é a memória Atual e <code>Peak</code> é o pico que a memória chegou ao processar o algoritmo.
+&nbsp; Onde <code>Current</code> é a memória atual e <code>Peak</code> é o pico que a memória chegou ao processar o algoritmo.
 </p>
 
 <p align='justify'>
-&nbsp; Sendo as listas utilizadas do tipo não ordenadas e ordenadas, os algoritmos<strong> busca binária</strong> e <strong>busca ternária</strong> não foram experimentados para as listas não ordenadas, pois estes necessitam que os dados estejam ordenados previamente.  E para os algoritmos <strong>busca quadrática</strong> e <strong>busca cúbica</strong> foram executados somente a lista não ordenada, por questão de tempo de execução.
+&nbsp; Sendo as listas utilizadas do tipo não ordenadas e ordenadas, os algoritmos<strong> busca binária</strong> e <strong>busca ternária</strong> não foram experimentados para as listas não ordenadas, pois estes necessitam que os dados estejam ordenados previamente. Para os algoritmos <strong>busca quadrática</strong> e <strong>busca cúbica</strong> foram executados somente a lista não ordenada, por causa das suas complexidades.
 </p>
 
 
@@ -187,22 +187,22 @@ peak = peak / 10**6
 &nbsp; Para esta análise, foram utilizando os seguintes algoritmos:
 </p>
 
-- Busca Linear V1
-- Busca Linear V2
-- Busca Binária
-- Busca Quadrática 
-- Busca Ternária e
-- Busca Cúbica - Tripla Checagem
+- Busca Linear V1;
+- Busca Linear V2;
+- Busca Binária;
+- Busca Quadrática;
+- Busca Ternária e;
+- Busca Cúbica - Tripla Checagem.
 
 <p align='justify'>
-&nbsp; Juntamente com 13 instâncias de dados, variando seu tamanho e seu tipo (<strong>ordenados</strong> e <strong>não ordenados</strong>).
+&nbsp; Juntamente com 13 instâncias de dados, variando seu tamanho e seu tipo, <strong>ordenados</strong> e <strong>não ordenados</strong>.
 </p>
 
 ### 4.1. Busca Linear V1 e V2 O(n)
 <a id="busca_linear"></a>
 
 <p align='justify'>
-&nbsp; O primeiro algoritmo experimentado foi o busca linear, onde sua execução percorre todo a lista para encontrar o índice do valor procurado.
+&nbsp; O primeiro algoritmo experimentado foi a busca linear, onde sua execução percorre todo a lista para encontrar o índice do valor procurado.
 </p>
 
 #### 4.1.1. Versão 1
@@ -214,13 +214,13 @@ peak = peak / 10**6
 #### 4.1.2. Versão 2
 
 <p align='justify'>
-&nbsp; Já a versão 2 é uma melhora da versão 1, onde ao encontrar a primeira ocorrência do valor procurado, já retorna a posição onde ele se encontra, assim, dependendo da posição do valor na lista, o tempo de execução é diminuindo consideravelmente, tendo um desempenho melhor em listas maiores.
+&nbsp; Já a versão 2 é uma melhora da versão 1, onde, ao encontrar a primeira ocorrência do valor procurado, já retorna sua posição, assim, dependendo da posição do valor na lista, o tempo de execução é diminuindo consideravelmente, tendo um desempenho melhor em listas maiores.
 </p>
 
 #### 4.1.3. Comparação do Tempo de Execução e Consumo de Memória 
 
 <p align='justify'>
-&nbsp; Para as duas versões foram utilizados os dois tipos de lista, não ordenado e ordenado, os valores passados para busca foram: 
+&nbsp; Para as duas versões foram utilizados os dois tipos de lista, não ordenada e ordenada, os valores passados para busca foram: 
 </p>
 
 - Primeiro item da lista;
@@ -232,11 +232,11 @@ peak = peak / 10**6
 </p>
 
 <p align='justify'>
-&nbsp; Analisando os tempos médios de execução para cada instância, nota-se que da instância 1 até a 10 não há uma mudança significativa do tempo de execução, mas partindo da instância 10 até a 13, o tempo médio dá um salto, sendo a versão 2 melhor que a versão 1.
+&nbsp; Analisando os tempos médios de execução para cada instância, nota-se que da primeira instância até a décima não há uma mudança significativa do tempo de execução, mas partindo da décima instância até a décima terceira, o tempo médio aumenta consideravelmente, sendo a versão 2 melhor que a versão 1.
 </p>
 
 <p align='justify'>
-&nbsp; Para o consumo médio de memória, não há uma mudança significativa dos valores, pode-se notar somente que na lista não ordenada, o consumo de memória até a instância 2 se mantém fixo, mas muda a partir da instância 3. Os gráficos referente a essa analise são mostrado nas figuras 2, 3, 4 e 5 para o tempo médio de execução e nas figuras 6, 7, 8 e 9 para o consumo médio de memória.
+&nbsp; Para o consumo médio de memória, não há uma mudança significativa dos valores, pode-se notar somente que na lista não ordenada, o consumo de memória até a segunda instância se mantém fixo, mas muda a partir da terceira. Os gráficos referente a essa análise são mostrado nas figuras 2, 3, 4 e 5 para os tempos de execução e nas figuras 6, 7, 8 e 9 para os consumos de memória.
 </p>
 
 <br>
@@ -310,7 +310,7 @@ peak = peak / 10**6
 </table>
 
 <p align='justify'>
-&nbsp; Em uma análise mais profunda das médias <a href='#tabelasResumo'>(Podendo ser visualizado aqui)</a>, pode-se concluir que para listas pequenas os dois algoritmos se comportam igualmente, mas em uma análise de código, a versão 2 resolve o problema da versão 1, e dependendo do valor procurado a versão 2 tem o tempo de execução melhor.
+&nbsp; Em uma análise mais profunda das médias, pode-se concluir que para listas pequenas os dois algoritmos se comportam igualmente, mas em uma análise de código, a versão 2 resolve o problema da versão 1, e dependendo do valor procurado a versão 2 tem o tempo de execução melhor.
 </p>
 
 
