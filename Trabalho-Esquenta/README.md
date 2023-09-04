@@ -42,14 +42,14 @@
 1. [INTRODUÇÃO](#intro)
 2. [OBJETIVOS](#obj)
 3. [MATERIAIS E MÉTODOS](#mat_met)
-    - [Tabela 1: Configurações da Máquina Utilizada](#tabel1)
+    - [Tabela 1: Configurações da Máquina Utilizada](#tabela1)
     - [Trecho de Código 1: Cálculos de Tempo de Execução e Memória](#cod1)
 4. [ANÁLISE DOS ALGORITMOS](#analise)
     - [Busca Linear V1 e V2 O(n)](#busca_linear)
     - [Busca Binária O(log n)](#busca_bin)
-    - [Busca Quadrática O($n^2$)](#busca_quad)
+    - [Busca Quadrática O(n<sup>2</sup>)](#busca_quad)
     - [Busca Ternária O(log n)](#busca_ter)
-    - [Busca Cúbica - Tripla Checagem O($n^3$)](#busca_cub)
+    - [Busca Cúbica - Tripla Checagem O(n<sup>3</sup>)](#busca_cub)
     - [Resumo Geral dos Experimentos - Tabelas](#res_geral)
     - [Resumo Geral dos Experimentos - Gráficos](#res_geral_graf)
 5. [CONCLUSÃO](#conclusao)
@@ -78,12 +78,14 @@
 </p>
 
 <table align='center'>
-    <caption style='text-align: center;'>Figura 1: Complexidade dos Algoritmos</caption>
-    <tr>
-        <td>
-            <img src='../Public/img/complexidade_alg.jpg' width="250" height="250">
-        </td>
-    <tr>
+    <thead><tr><th>Figura 1: Complexidade dos Algoritmos</th></tr>
+    <tbody>
+        <tr>
+            <td style='text-align: center;'>
+                <img src='../Public/img/complexidade_alg.jpg' width="250" height="250">
+            </td>
+        <tr>
+    </tbody>
 <tfoot>
     <tr>
       <td style='font-size: 11px;'>Fonte: <a href='https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html'>mapoliveira.blogspot.com</a></td>
@@ -139,7 +141,7 @@
 
 
 <p align='justify'>
-&nbsp; Os experimentos realizados, visam analisar os tempos de execução e o consumo de memória gasta pelos algoritmos de busca, dando maior foco no pior caso. Os dados utilizados para busca foi disponibilizado anteriormente, mas é possível gerar novos dados utilizando os arquivos:
+&nbsp; Os experimentos realizados, visam analisar os tempos de execução e o consumo de memória gasta pelos algoritmos de busca, dando maior foco no pior caso. Os dados utilizados para busca foram disponibilizados anteriormente, mas é possível gerar novos dados utilizando os arquivos:
 </p>
 
 - [Gerar Lista Ordenada](gerar_lista_ordenada.py)
@@ -176,7 +178,7 @@ peak = peak / 10**6
 </p>
 
 <p align='justify'>
-&nbsp; Sendo as listas utilizadas do tipo não ordenadas e ordenadas, os algoritmos<strong> busca binária</strong> e <strong>busca ternária</strong> não foram experimentados para as listas não ordenadas, pois estes necessitam que os dados estejam ordenados previamente. Para os algoritmos <strong>busca quadrática</strong> e <strong>busca cúbica</strong> foram executados somente a lista não ordenada, por causa das suas complexidades.
+&nbsp; Sendo as listas utilizadas do tipo não ordenadas e ordenadas, os algoritmos<strong> busca binária</strong> e <strong>busca ternária</strong> não foram experimentados para as listas não ordenadas, pois estes necessitam que os dados estejam ordenados previamente. Para os algoritmos <strong>busca quadrática</strong> e <strong>busca cúbica</strong> foram executados somente as listas não ordenadas, por causa das suas complexidades.
 </p>
 
 
@@ -195,7 +197,7 @@ peak = peak / 10**6
 - Busca Cúbica - Tripla Checagem.
 
 <p align='justify'>
-&nbsp; Juntamente com 13 instâncias de dados, variando seu tamanho e seu tipo, <strong>ordenados</strong> e <strong>não ordenados</strong>.
+&nbsp; Juntamente com 13 instâncias de dados, variando seu tamanho e seu tipo, <strong>ordenadas</strong> e <strong>não ordenadas</strong>.
 </p>
 
 ### 4.1. Busca Linear V1 e V2 O(n)
