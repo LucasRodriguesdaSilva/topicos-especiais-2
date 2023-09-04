@@ -676,7 +676,7 @@ peak = peak / 10**6
 **Busca Quadrática**| - | - | - | - | - | - | - | - | - | - | - | - | - |
 **Busca Ternária**| 0.0| 0.0| 0.0| 0.0| 0.0| 0.0| 0.0| 0.0| 0.0| 0.0| 0.0| 0.0| 0.0 |
 **Busca Cúbica**| - | - | - | - | - | - | - | - | - | - | - | - | - |
-###### Fonte: Próprio Autor.
+###### Fonte: Próprio autor.
 
 
 ##
@@ -692,7 +692,7 @@ peak = peak / 10**6
 **Busca Quadrática**|0.0|0.0|0.09424|0.61945|3.64297|14.58448|185.51226|723.18506|29.31432|106.85933|1303.73732|193.00474|4374.33062|
 **Busca Ternária**|-|-|-|-|-|-|-|-|-|-|-|-|-|
 **Busca Cúbica**|0.03906|0.07682|200.72743|347.44842|647.44842|767.44842|1793.94842|2820.44842|4140.59909|6768.57125|8840.79478|14400.43911|18000.31143|
-###### Fonte: Próprio Autor.
+###### Fonte: Próprio autor.
 
 ##
 
@@ -708,7 +708,7 @@ peak = peak / 10**6
 **Busca Quadrática**|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
 **Busca Ternária**|0.00002|0.00017|0.00017|0.00017|0.00020|0.00020|0.00020|0.00020|0.00020|0.00020|0.00020|0.00020|0.00020|
 **Busca Cúbica**|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-###### Fonte: Próprio Autor.
+###### Fonte: Próprio autor.
 
 ##
 
@@ -723,7 +723,7 @@ peak = peak / 10**6
 **Busca Quadrática**|0.00023|0.00023|0.00028|0.00028|0.00028|0.00028|0.00031|0.00031|0.00090|0.00125|0.00093|0.00060|0.00070|
 **Busca Ternária**|-|-|-|-|-|-|-|-|-|-|-|-|-|
 **Busca Cúbica**|0.00037|0.00037|0.00052|0.00052|0.00051|0.00052|0.00052|0.00112|0.00113|0.00210|0.00213|0.00513|0.00613|
-###### Fonte: Próprio Autor.
+###### Fonte: Próprio autor.
 
 ### 4.7. Resumo Geral dos Experimentos - Gráficos
 <a id="res_geral_graf"></a> 
@@ -734,7 +734,7 @@ peak = peak / 10**6
 
 <table align='center'>
     <thead>
-        <tr><th colspan='2'>Histograma dos resultados obtidos</th></tr>
+        <tr><th colspan='2'>Histograma dos Resultados Obtidos</th></tr>
         <tr >
             <th style='text-align: center;'>Figura 36: Media Geral dos Tempos de Execução</th>
             <th style='text-align: center;'>Figura 37: Media Geral dos Consumo de Memória</th>
