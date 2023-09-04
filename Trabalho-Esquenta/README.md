@@ -74,7 +74,7 @@
 <tr><td><img src='../Public/img/complexidade_alg.jpg' width="250" height="250"></td> <tr>
 <tfoot>
     <tr>
-      <td style='font-size: 11px;'>Fonte: <a href='https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html'>mapoliveira.blogspot.com</a></td>
+      <td style='font-size: 11px;'  colspan='3'>Fonte: <a href='https://mapoliveira.blogspot.com/2013/10/a-importancia-dos-algoritmos-para-um.html'>mapoliveira.blogspot.com</a></td>
     </tr>
   </tfoot>
 </table>
@@ -115,7 +115,7 @@
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'>Fonte: Próprio Autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio Autor.</td>
         </tr>
   </tfoot>
 </table>
@@ -252,7 +252,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -287,7 +287,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -343,7 +343,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -378,7 +378,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -429,7 +429,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -460,7 +460,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
@@ -503,7 +503,7 @@ peak = peak / 10**6
     </tbody>
     <tfoot>
         <tr>
-            <td style='font-size: 11px;'>Fonte: Próprio autor.</td>
+            <td style='font-size: 11px;'  colspan='3'>Fonte: Próprio autor.</td>
         </tr>
     </tfoot>
 </table>
