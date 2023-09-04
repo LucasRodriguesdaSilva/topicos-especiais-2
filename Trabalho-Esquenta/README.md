@@ -324,14 +324,14 @@ peak = peak / 10**6
 </p>
 
 <p align='justify'>
-&nbsp; Para o experimento, foi utilizado 10 iterações para cada instância e os seguintes valores para busca
+&nbsp; Para o experimento, foi utilizado 10 iterações para cada instância e os seguintes valores para busca:
 </p>
 
 - Elemento das extremidades, (Primeiro e Último) e;
 - Elemento do meio.
 
 <p align='justify'>
-&nbsp; As figuras 10 à 12 e 15 à 17, mostram os tempos de execução e consumo de memória a cada iteração para a instância 13, já as figuras 13 e 17 mostra as médias para cada instância. Pode-se notar que o tempo gasto é imperceptível mesmo o vetor sendo muito grande, e isso é visto principalmente quando o elemento da busca é o do meio. Já para o consumo da memória, referente ao elemento do meio, há um pico de consumo constante. Para os elementos das extremidades, o consumo começa alto e com o decorrer das iterações vai diminuindo e se mantém estável.  
+&nbsp; As figuras 10 à 12 e 15 à 17, mostram os tempos de execução e consumo de memória a cada iteração para a décima terceira instância, já as figuras 13 e 17 mostra as médias para cada instância. Pode-se notar que o tempo gasto é imperceptível mesmo o vetor sendo muito grande, e isso é visto principalmente quando o elemento da busca é o do meio. Já para o consumo da memória, referente ao elemento do meio, há um pico de consumo constante. Para os elementos das extremidades, o consumo começa alto e com o decorrer das iterações vai diminuindo e se mantém estável.  
 </p>
 
 
