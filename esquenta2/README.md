@@ -293,11 +293,11 @@
 <a id="ref"></a>
 
 <p align='justify'>
-    1 SILVA, J. A. Estruturas de dados. São Paulo: Editora ABC, 2019. 
-    
-    2 COSTA, M. F.; SANTOS, R. L. Algoritmos e programação. Rio de Janeiro: Editora XYZ, 2020. 
-    
-    3 KNUTH, D. E. The art of computer programming. Volume 3: Sorting and searching. 2. ed. Reading: Addison-Wesley, 1998. 
-    
-    4 CORMEN, T. H. et al. Introduction to algorithms. 3. ed. Cambridge: MIT Press, 2009
+    [1] SILVA, J. A. Estruturas de dados. São Paulo: Editora ABC, 2019. 
+    <br>
+    [2] COSTA, M. F.; SANTOS, R. L. Algoritmos e programação. Rio de Janeiro: Editora XYZ, 2020. 
+    <br>
+    [3] KNUTH, D. E. The art of computer programming. Volume 3: Sorting and searching. 2. ed. Reading: Addison-Wesley, 1998.  
+    <br>
+    [4] CORMEN, T. H. et al. Introduction to algorithms. 3. ed. Cambridge: MIT Press, 2009
 </p>
