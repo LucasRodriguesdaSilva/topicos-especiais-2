@@ -48,7 +48,7 @@
 <a id="intro"></a>
 
 <p align='justify'>
-&nbsp; Uma lista é uma estrutura de dados que armazena um conjunto de elementos que podem ser números, strings, objetos ou outros tipos de dados <a href='#ref'> [1] </a>. Cada elemento da lista possui uma posição (índice) começando em 0 e terminando com o tamanho da lista menos 1. Por exemplo, a lista [3, 5, 2, 7, 9] possui 5 elementos, o elemento na posição 0 é 3, o elemento na posição 1 é 5 e assim por diante.
+&nbsp; Uma lista é uma estrutura de dados que armazena um conjunto de elementos que podem ser números, strings, objetos ou outros tipos de dados <a href='#ref'> [1] </a>. Cada elemento da lista possui uma posição (índice), indo de 0 à n - 1.
 </p>
 
 <p align='justify'>
@@ -56,11 +56,11 @@
 </p>
 
 <p align='justify'>
-&nbsp;  Um algoritmo de pesquisa máxima de lista é um tipo especial de algoritmo de pesquisa que retorna o maior elemento de uma lista, ou seja, Um elemento que é maior que todos os outros elementos <a href='#ref'> [3] </a>. Esse tipo de algoritmo ajuda a resolver problemas como determinar o maior salário de uma empresa, o maior número de votos em uma eleição ou o maior valor de uma função matemática.
+&nbsp;  Um algoritmo de pesquisa máxima de lista é um tipo especial de algoritmo de pesquisa que retorna o maior elemento de uma lista, ou seja, um elemento que é maior que todos os outros elementos <a href='#ref'> [3] </a>. Esse tipo de algoritmo ajuda a resolver problemas como determinar o maior salário de uma empresa, o maior número de votos em uma eleição, entre outros.
 </p>
 
 <p align='justify'>
-&nbsp;  Existem várias maneiras de implementar algoritmos de busca de valor máximo em listas. No entanto, a ideia básica é percorrer a lista e comparar cada elemento com um valor inicial que representa o maior elemento encontrado até agora. Se o elemento atual for maior que o valor inicial, ele se tornará o novo valor máximo. O valor mais alto no final da lista é o resultado do algoritmo <a href='#ref'> [4] </a>.
+&nbsp;  Existem várias maneiras de implementar algoritmos de busca de valor máximo em listas. No entanto, a ideia básica é percorrer a lista e comparar cada elemento com um valor inicial que representa o maior elemento encontrado até o momento. Se o elemento atual for maior que o valor inicial, ele se tornará o novo valor máximo. O valor mais alto no final da lista é o resultado do algoritmo <a href='#ref'> [4] </a>.
 </p>
 
 ## 2. OBJETIVOS DO EXPERIMENTO
@@ -106,11 +106,11 @@
 
 
 <p align='justify'>
-&nbsp; Para calcular o tempo de execução utilizou-se o módulo time, já para calcular o consumo de memória utilizou-se o módulo tracemalloc, igualmente utilizado no <a href="../Trabalho-Esquenta/README.md"> relatório 1</a>.
+&nbsp; Para calcular o tempo de execução utilizou-se o módulo time. Já para calcular o consumo de memória utilizou-se o módulo tracemalloc, igualmente utilizado no <a href="../Trabalho-Esquenta/README.md"> relatório 1</a>.
 </p>
 
 <p align='justify'>
-&nbsp; Neste trabalho utilzou-se somente as listas não ordenadas, com 10 iterações para cada instância.
+&nbsp; Neste trabalho, utilzou-se somente as listas não ordenadas, com 10 iterações para cada instância.
 </p>
 
 
@@ -168,7 +168,7 @@
 </table>
 
 <p align='justify'>
-&nbsp; Para o consumo de memória, podemos notar que existe até a segunda instância o pico é constante, mas entre a segunda e a terceira instância a um salto do consumo, que depois é estabilizado até a última instância de dados. Isso pode ter ocorrido por conta da variação do tamanho das lista 2 e 3, onde a segunda lista contém duzentos elementos e a terceira contém mil elementos, fazendo assim, essa variação brusca.
+&nbsp; Para o consumo de memória, pode-se notar, até a segunda instância, um pico de consumo constante, mas entre a segunda e a terceira instância a um salto do consumo, que depois é estabilizado até a última lista. Isso pode ter ocorrido por conta da variação do tamanho das lista 2 e 3, onde a segunda lista contém duzentos elementos e a terceira contém mil elementos, fazendo assim, essa variação brusca.
 </p>
 
 <p align='justify'>
@@ -236,8 +236,8 @@
 ###### Fonte: Próprio autor.
 
 
-#### Tabela 04: Média Geral do Consumo da Memória Gasta
-<a id="tabela4"></a> 
+#### Tabela 03: Média Geral do Consumo da Memória Gasta
+<a id="tabela3"></a> 
 
 **Algoritmos**       | **Instância $100$ (s)** | **Instância $200$ (s)** | **Instância $1*10^3$ (s)** | **Instância $2*10^3$ (s)** | **Instância $5*10^3$ (s)** | **Instância $1*10^4$ (s)** | **Instância $5*10^4$ (s)** | **Instância $1*10^5$ (s)** | **Instância $5*10^5$ (s)** | **Instância $1*10^6$ (s)** | **Instância $5*10^6$ (s)** | **Instância $1*10^7$ (s)** | **Instância $1*10^8$ (s)** 
 :--------------------:|:--------------------------:|:--------------------:|:---------------------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:
@@ -249,7 +249,7 @@
 <a id="res_geral_graf"></a> 
 
 <p align='justify'>
-&nbsp; As figuras 36 e 37 mostram o histograma dos resultados obtidos nas tabelas 2, 3, 4 e 5.
+&nbsp; As figuras 5 e 6 mostram o histograma dos resultados obtidos nas tabelas 2 e 3.
 </p>
 
 <table align='center'>
@@ -283,7 +283,13 @@
 
 
 <p align='justify'>
-&nbsp; Ao realizar a investigação dos algoritmos, e analisar os gráficos e tabelas, é possível concluir que o algoritmo de busca do valor máximo na versão 1 é mais eficiente do que na versão 2, tanto em relação ao tempo nescessário para concluir a execução, quanto em relação ao consumo de memória nescessária. Isso se deve ao fato de que a versão 1 utiliza um laçõ de repetição para percorrer a lista, enquanto a versão 2 utiliza uma chamada recursiva. A recursividade aumenta o consumo de memória, pois cada chamada cria um novo quadro na pilha de execução, e também pode causar uma sobrecarga no tempo de execução, pois cada chamada envolve operações adicionais, como passagem de parâmetros e retorno de valores. Portanto, a versão 1 é mais eficiente e estável do que a versão 2.
+&nbsp; Ao realizar a investigação dos algoritmos, e analisar os gráficos e tabelas, é possível concluir que o algoritmo de busca do valor máximo na versão 1 é mais eficiente do que na versão 2, tanto em relação ao tempo nescessário para concluir a execução, quanto em relação ao consumo de memória nescessária. 
+
+Isso se deve ao fato de que a versão 1 utiliza um laço de repetição para percorrer a lista, enquanto a versão 2 utiliza uma chamada recursiva. A recursividade aumenta o consumo de memória, pois cada chamada cria um novo quadro na pilha de execução, e também pode causar uma sobrecarga no tempo de execução, pois cada chamada envolve operações adicionais, como passagem de parâmetros e retorno de valores. Portanto, a versão 1 é mais eficiente e estável do que a versão 2.
+</p>
+
+<p align='justify'>
+&nbsp; Mesmo o algoritmo da versão 2, implementar a divisão e conquista, os experimentos mostraram que em uma lista não ordenada, sua eficiencia é menor do que a versão 1 e isso se deve ao fato de que a versão 1 utiliza um laço de repetição para percorrer a lista, enquanto a versão 2 utiliza uma chamada recursiva. A recursividade aumenta o consumo de memória, pois cada chamada cria um novo quadro na pilha de execução, e também pode causar uma sobrecarga no tempo de execução, pois cada chamada envolve operações adicionais, como passagem de parâmetros e retorno de valores. Portanto, a versão 1 é mais eficiente e estável do que a versão 2.
 </p>
 
 
