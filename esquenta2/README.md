@@ -42,6 +42,13 @@
 1. [INTRODUÇÃO](#intro)
 2. [OBJETIVOS](#obj)
 3. [MATERIAIS E MÉTODOS](#mat_met)
+4. [ANÁLISE DOS ALGORITMOS](#analise)
+    - 4.1. [Máximo Valor v1](#maxval1)
+    - 4.2. [Máximo Valor v2](#maxval2)
+    - 4.3. [Resumo Geral dos Experimentos - Tabelas](#res_tab)
+    - 4.4. [Resumo Geral dos Experimentos - Gráficos](#res_geral_graf)
+5. [CONCLUSÃO](#5-conclusão)
+5. [REFERÊNCIAS BIBLIOGRÁFICAS ](#6-referências-bibliográficas)
 
 
 ## 1. INTRODUÇÃO
@@ -224,7 +231,7 @@
 
 
 ### 4.3. Resumo Geral dos Experimentos - Tabelas
-<a id="maxval2"></a>
+<a id="res_tab"></a>
 
 #### Tabela 02: Média Geral do Tempo Gasto
 <a id="tabela2"></a>
@@ -279,7 +286,6 @@
 
 
 ## 5. CONCLUSÃO
-<a id="conclusao"></a>
 
 
 <p align='justify'>
