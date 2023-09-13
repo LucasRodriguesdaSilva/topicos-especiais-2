@@ -293,10 +293,6 @@
 </p>
 
 <p align='justify'>
-&nbsp; Isso se deve ao fato de que a versão 1 utiliza um laço de repetição para percorrer a lista, enquanto a versão 2 utiliza uma chamada recursiva. A recursividade aumenta o consumo de memória, pois cada chamada cria um novo quadro na pilha de execução, e também pode causar uma sobrecarga no tempo de execução, pois cada chamada envolve operações adicionais, como passagem de parâmetros e retorno de valores. Portanto, a versão 1 é mais eficiente e estável do que a versão 2.
-</p>
-
-<p align='justify'>
 &nbsp; Mesmo o algoritmo da versão 2, implementar a divisão e conquista, os experimentos mostraram que em uma lista não ordenada, sua eficiencia é menor do que a versão 1 e isso se deve ao fato de que a versão 1 utiliza um laço de repetição para percorrer a lista, enquanto a versão 2 utiliza uma chamada recursiva. A recursividade aumenta o consumo de memória, pois cada chamada cria um novo quadro na pilha de execução, e também pode causar uma sobrecarga no tempo de execução, pois cada chamada envolve operações adicionais, como passagem de parâmetros e retorno de valores. Portanto, a versão 1 é mais eficiente e estável do que a versão 2.
 </p>
 
