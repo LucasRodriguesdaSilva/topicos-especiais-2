@@ -290,8 +290,10 @@
 
 <p align='justify'>
 &nbsp; Ao realizar a investigação dos algoritmos, e analisar os gráficos e tabelas, é possível concluir que o algoritmo de busca do valor máximo na versão 1 é mais eficiente do que na versão 2, tanto em relação ao tempo nescessário para concluir a execução, quanto em relação ao consumo de memória nescessária. 
+</p>
 
-Isso se deve ao fato de que a versão 1 utiliza um laço de repetição para percorrer a lista, enquanto a versão 2 utiliza uma chamada recursiva. A recursividade aumenta o consumo de memória, pois cada chamada cria um novo quadro na pilha de execução, e também pode causar uma sobrecarga no tempo de execução, pois cada chamada envolve operações adicionais, como passagem de parâmetros e retorno de valores. Portanto, a versão 1 é mais eficiente e estável do que a versão 2.
+<p align='justify'>
+&nbsp; Isso se deve ao fato de que a versão 1 utiliza um laço de repetição para percorrer a lista, enquanto a versão 2 utiliza uma chamada recursiva. A recursividade aumenta o consumo de memória, pois cada chamada cria um novo quadro na pilha de execução, e também pode causar uma sobrecarga no tempo de execução, pois cada chamada envolve operações adicionais, como passagem de parâmetros e retorno de valores. Portanto, a versão 1 é mais eficiente e estável do que a versão 2.
 </p>
 
 <p align='justify'>
